@@ -49,23 +49,24 @@ rel="stylesheet" type="text/css">
           <ul id="top-menu">
            
 			  <li><a href="#setting-up-android-project">setting up Android Project</a></li>
+			  			  <li><a href="#flutter-version">Flutter Version</a></li>
+
 			  <li><a href="#set-up-firebase-project">set up Firebase</a></li>
-			  <li><a href="#flutter-version">Information of About Flutter Version</a></li>
+			  			   <li><a href="#change-app-name">Change App Name</a></li>
 			   <li><a href="#change-logo">Change App Logo</a></li>
-			   <li><a href="#change-app-name">Change App Name</a></li>
 			   <li><a href="#change-packae-name">Change Package Name</a></li>
+			   			<li><a href="#relece_build">Create Release Build</a></li>
 				  <li><a href="#fronted-login">Login Page</a></li>
 			<li><a href="#admin_view">Admin View</a></li>
 			<li><a href="#trainer_view">Trainer View</a></li>
 			<li><a href="#member_view">Member View</a></li>
-			<li><a href="#relece_build">Create Release Build</a></li>
 			        </ul>
         </aside>
       </div>
       <div class="col-md-8">
         <section  id="Introduction">
           <div id="header" class="row">
-            <div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo" height="75" width="70"></a> </div>
+            <div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo" height="110" width="100"></a> </div>
             <div class="col-md-8 col-md-offset-1 desc">
               <h4 class="slight">CrossFit App <sub><small></small></sub></h4>
               <h5 class="slight"><small> Documented by Mojoomla</a> - at June 01 2023</small></h5>
@@ -78,7 +79,7 @@ rel="stylesheet" type="text/css">
 		
 		  <section id="setting-up-android-project">
 		  <hr class="vertical-space2">
-			    <h3><strong>1). <u>Setting up android project</u></strong></h3>
+			    <h3><strong>1). <u>Set up Flutter Project</u></strong></h3>
 				<br>
                <h5><strong>A. <u>Requirement</u></strong></h5>
               <ol >
@@ -115,6 +116,12 @@ rel="stylesheet" type="text/css">
 				<li> Click ok.</li>
 			</ol>
 			
+			
+			<section id = "flutter-version"><h3><strong>3).<u>Flutter Version</u></strong></h3>
+			  <p>environment: </br>
+  sdk: '>=2.18.4 <3.0.0' </p>
+			  </section>
+			
 			<section id="set-up-firebase-project">
 				   <strong><h3>2).<u>Set Up Firebase</u></h3></strong>
 				   <p>To set up Firebase Database for a CrossFit app, follow these step-by-step instructions:</p>
@@ -135,22 +142,7 @@ rel="stylesheet" type="text/css">
 				   
 		</section>
 			 
-			  <section id = "flutter-version"><h3><strong>3).<u>Flutter Version</u></strong></h3>
-			  <p>environment: </br>
-  sdk: '>=2.18.4 <3.0.0' </p>
-			  </section>
-			  
-<section id = "change-logo">
-<h3><strong>4).<u>Change Application Logo</u></strong></h3>
-		<p>Change the launcher icon in <code>Replace the default app icons:<br>
-
-<strong> -> </strong>For Android, navigate to the <strong>android/app/src/main/res</strong> directory in your Flutter project. Replace the icons in the mipmap directories with your custom icons, following the size-specific folders (e.g., mipmap-mdpi, mipmap-hdpi, etc.).<br>
-<strong> -> </strong>For iOS, navigate to the <strong> ios/Runner/Assets.xcassets/AppIcon</strong> appiconset directory in your Flutter project. Replace the default icons with your custom icons. Make sure to match the size and format requirements for each icon.</code> </p>
-        <img src="images/change-logo.png" id="change-img-logo">
-		
-        <p><strong>Note:</strong> You need the 512x512 px size for publishing to Google Play.</p> </section>
-			   	   
-<section id = "change-app-name"> 
+		<section id = "change-app-name"> 
 
 <h3> <strong>5).<u>Change Application name</u></strong></h3>
         <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
@@ -177,7 +169,19 @@ rel="stylesheet" type="text/css">
 		<li>Save the <strong>Info.plist</strong> file.</li>
 		</ol> 
 		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
-		</section>
+		</section>	  
+			  
+<section id = "change-logo">
+<h3><strong>4).<u>Change Application Logo</u></strong></h3>
+		<p>Change the launcher icon in <code>Replace the default app icons:<br>
+
+<strong> -> </strong>For Android, navigate to the <strong>android/app/src/main/res</strong> directory in your Flutter project. Replace the icons in the mipmap directories with your custom icons, following the size-specific folders (e.g., mipmap-mdpi, mipmap-hdpi, etc.).<br>
+<strong> -> </strong>For iOS, navigate to the <strong> ios/Runner/Assets.xcassets/AppIcon</strong> appiconset directory in your Flutter project. Replace the default icons with your custom icons. Make sure to match the size and format requirements for each icon.</code> </p>
+        <img src="images/change-logo.png" id="change-img-logo">
+		
+        <p><strong>Note:</strong> You need the 512x512 px size for publishing to Google Play.</p> </section>
+			   	   
+
 
         
 <section id = "change-packae-name">
@@ -212,38 +216,7 @@ rel="stylesheet" type="text/css">
 		<p>After following these steps, your Flutter application should have the updated package name throughout the project. Make sure to update any dependencies or configurations that reference the old package name as well.</p>
 		</section>
 		
-			<section id="fronted-login">
-			<h3><strong>7).<u>Login Page:</u></strong></h3>
-			
-			
-			  <p> You will see this login page.You can now login with admin username and password.</p><br>           
-			   
-				<img alt="" src="images/application/login_main.jpg" height = "350" width = "200"><br><br>           
-			   <p>All users can login from this login page. </p>
-			   </ol>
-				<div id="footer"> </div>
-			 	
-		</section>
-	
-<section id = "admin_view"> <h3><strong>8).<u> Admin View</u></strong></h3>
-<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin123</p>
-		<img alt="" src="images/application/admin-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/admin-view.jpg" height = "350" width = "200">
-		
-			</section>
-			
-			<section id = "trainer_view"> <h3><strong>9).<u> Trainer View</u></strong></h3>
-		<img alt="" src="images/application/trainer-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/trainer-dashbord.jpg" height = "350" width = "200">
-		
-			</section>
-			
-			<section id = "member_view"> <h3><strong>10).<u> Member View</u></strong></h3>
-		<img alt="" src="images/application/member-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/membe-dashbord.jpg" height = "350" width = "200">
-		
-			</section>
-			<section id="relece_build">
+		<section id="relece_build">
 			<h3><strong>11).<u>Sign your release build</u></strong></h3>
 			<p>To sign a release build for CrossFit, you can follow these steps:
 			<br>
@@ -271,9 +244,42 @@ rel="stylesheet" type="text/css">
 		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build APK".<br>
 		<strong>gym_trainer_app\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
 	</section>	
+		
+			<section id="fronted-login">
+			<h3><strong>7).<u>Login Page:</u></strong></h3>
+			
+			
+			  <p> You will see this login page.You can now login as admin username and password.</p><br>           
+			   
+				<img alt="" src="images/application/login_main.jpg" height = "350" width = "200"><br><br>           
+			   <p>All users can login from this login page. </p>
+			   </ol>
+				<div id="footer"> </div>
+			 	
+		</section>
+	
+<section id = "admin_view"> <h3><strong>8).<u> Admin View</u></strong></h3>
+<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>test@gmail.com<br><strong>Password :</strong>admxxxxx</p>
+		<img alt="" src="images/application/admin-drawer.jpg" height = "350" width = "200">
+		<img alt="" src="images/application/admin-view.jpg" height = "350" width = "200">
+		
+			</section>
+			
+			<section id = "trainer_view"> <h3><strong>9).<u> Trainer View</u></strong></h3>
+		<img alt="" src="images/application/trainer-drawer.jpg" height = "350" width = "200">
+		<img alt="" src="images/application/trainer-dashbord.jpg" height = "350" width = "200">
+		
+			</section>
+			
+			<section id = "member_view"> <h3><strong>10).<u> Member View</u></strong></h3>
+		<img alt="" src="images/application/member-drawer.jpg" height = "350" width = "200">
+		<img alt="" src="images/application/membe-dashbord.jpg" height = "350" width = "200">
+		
+			</section>
+			
 
                     <!-- start-footer-->
-          <div id="footer"> © 2017 Mojoomla All Rights Reserved. </div>
+          <div id="footer"> © 2023 Mojoomla All Rights Reserved. </div>
           <!-- end-footer -->
         </section>
 		
