@@ -3,6 +3,27 @@
 <html lang="en">
 <!--<![endif]-->
 <head>
+
+<style>
+    .image-container {
+	   width: 200px; /* Adjust the width of the image */
+      height: 400px; /* Adjust the height of the image */
+	   margin-top: 30px;    /* Set the desired top margin */
+    margin-bottom: 30px; /* Set the desired bottom margin */
+	  
+    }
+	.image-container img {
+      width: 100%; /* Makes the image fill the circular container */
+      height: 100%; /* Makes the image fill the circular container */
+      object-fit: cover; /* Maintains the image's aspect ratio while filling the container */
+    }
+	
+
+
+
+  </style>
+  
+
 <!-- Basic Page Needs
          ================================================== -->
 <meta charset="utf-8">
@@ -56,6 +77,7 @@ rel="stylesheet" type="text/css">
 			   <li><a href="#change-logo">Change App Logo</a></li>
 			   <li><a href="#change-packae-name">Change Package Name</a></li>
 			   			<li><a href="#relece_build">Create Release Build</a></li>
+				  <li><a href="#app_pages">CrossFit App Pages</a></li>
 				  <li><a href="#fronted-login">Login Page</a></li>
 			<li><a href="#admin_view">Admin View</a></li>
 			<li><a href="#trainer_view">Trainer View</a></li>
@@ -73,7 +95,7 @@ rel="stylesheet" type="text/css">
             </div>
           </div>
           <hr class="vertical-space2">
-          <p align="center"><img src="images/preview-image.jpg"></p>
+          <p align="center"><img src="images/preview-image1.png"></p>
          
 
 		
@@ -244,36 +266,36 @@ rel="stylesheet" type="text/css">
 		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build APK".<br>
 		<strong>gym_trainer_app\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
 	</section>	
+	
+	<section id = "app_pages"><h3><strong>7).<u> CrossFit App Pages</u></strong></h3></section>
 		
 			<section id="fronted-login">
-			<h3><strong>7).<u>Login Page:</u></strong></h3>
-			
-			
-			  <p> You will see this login page.You can now login as admin username and password.</p><br>           
+			<h3><strong><u>Login Page:</u></strong></h3>
+			  <p> You will see this login page.You can now login as admin username and password.</p>         
 			   
-				<img alt="" src="images/application/login_main.jpg" height = "350" width = "200"><br><br>           
+				<img class="image-container" alt="" src="images/application/login_main.png" height = "400" width = "200">           
 			   <p>All users can login from this login page. </p>
-			   </ol>
-				<div id="footer"> </div>
+			  
+				
 			 	
 		</section>
 	
-<section id = "admin_view"> <h3><strong>8).<u> Admin View</u></strong></h3>
+<section id = "admin_view"> <h3><strong><u> Admin View</u></strong></h3>
 <strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>test@gmail.com<br><strong>Password :</strong>admxxxxx</p>
-		<img alt="" src="images/application/admin-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/admin-view.jpg" height = "350" width = "200">
+	<img class="image-container" alt="" src="images/application/admin-drawer.png" height = "400" width = "200"> &nbsp;&nbsp;&nbsp;
+	<img class="image-container" alt="" src="images/application/admin-view.png" height = "400" width = "200">
 		
 			</section>
 			
-			<section id = "trainer_view"> <h3><strong>9).<u> Trainer View</u></strong></h3>
-		<img alt="" src="images/application/trainer-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/trainer-dashbord.jpg" height = "350" width = "200">
+			<section id = "trainer_view"> <h3><strong><u> Trainer View</u></strong></h3>
+		<img class="image-container" alt="" src="images/application/trainer-drawer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+		<img class="image-container" alt="" src="images/application/trainer-dashbord.png" height = "400" width = "200">
 		
 			</section>
 			
-			<section id = "member_view"> <h3><strong>10).<u> Member View</u></strong></h3>
-		<img alt="" src="images/application/member-drawer.jpg" height = "350" width = "200">
-		<img alt="" src="images/application/membe-dashbord.jpg" height = "350" width = "200">
+			<section id = "member_view"> <h3><strong><u> Member View</u></strong></h3>
+		<img class="image-container" alt="" src="images/application/member-drawer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+		<img class="image-container" alt="" src="images/application/membe-dashbord.png" height = "400" width = "200">
 		
 			</section>
 			
@@ -300,7 +322,21 @@ rel="stylesheet" type="text/css">
 <script src="js/jquery.jcarousel.min.js"></script>
 <script type="text/javascript" src="js/doubletaptogo.js" ></script>
 <script type="text/javascript" src="js/cube-custom.js" ></script>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
 
-
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 </body>
 </html>
