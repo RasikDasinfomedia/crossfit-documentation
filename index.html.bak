@@ -199,7 +199,7 @@ rel="stylesheet" type="text/css">
 				   <li>Now, you'll need to integrate Sendinblue with your application or platform. Sendinblue provides various integration options, such as SMTP, API, plugins, and libraries. Choose the integration method that suits your needs.</li>
 				   <li>Click Generate a new SMTP key. Add the name of your SMTP key and Generate then copy this smtp key.</li></br>
 				   <img alt="" src="images/application/change-smtp-details.png"></br></br>
-				   <li>Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li>
+				   <li>Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li></br>
 				   <li>SendinblueSMTPPassword is your SMTP Master PassWord.</li></br>
 
 				   </p>
