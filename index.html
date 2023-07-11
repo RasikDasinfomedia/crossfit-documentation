@@ -18,7 +18,24 @@
       object-fit: cover; /* Maintains the image's aspect ratio while filling the container */
     }
 	
-
+  table {
+      width: 100%;
+	  border: 2px solid #000 !important;
+    }
+    
+    td {
+      padding-top: 10px;
+      text-align: center;  
+	border: 1px solid #000 !important;
+	 
+    }
+  
+    th {
+      background-color:  #f2f2f2;
+	  padding: 8px;
+      text-align: center; 
+	  border: 1px solid #000 !important;
+    }
 
 
   </style>
@@ -168,15 +185,173 @@ rel="stylesheet" type="text/css">
 				   <li>Download the <strong>google-services.json</strong> file and place it in the <strong>android/app</strong> directory of your Flutter project.</li>
 				   </p>
 				   
-				   <p><strong>Step 3: Add your app Indexes</strong>
+				   <p><strong>Step 3: Enable Sign-in-Method</strong>
+				   <li>Click on "Authentication" from the left sidebar.</li>
+				   <li>Click on the "Sign-in method" tab.</li>
+				   <li>In the "Sign-in method" tab, you'll find a list of sign-in providers. Enable the desired sign-in method(s) you want to use, such as Email/Password, Google, Facebook, etc.</li>
+				   <li>Follow on the top step and enable bellow methods</li>
+				   <img alt="" src="images/application/signMethod.png">
+				   <p><strong>Step 4: Add your app Indexes</strong>
 				   <li>Click on "Firestore Database" → then click on "Indexes tab" → and finally click on "Add Index" Thne Fill Detail Like This Image.</li>
 				   <img alt="" src="images/application/addIndexing.png"></br>
 				   <li>After configuring the index, click on the "Create Index" button to add it to your Firestore database.</li>
 				   <li>Firestore will process the index creation request, which may take some time depending on the size of your database. You can check the status of the index creation on the "Indexes" page. Once the index status changes to "Enabled," the index is ready to use.</li>
 				   <li>Add all the Indexes below by following the above steps</li>
-				   <img alt="" src="images/application/indexList.png">
+				   <table>
+				   <tr>
+					<th>Collection ID</th>
+					<th>Fields indexed help_outline</th>
+					<th>Query scope</th>
+					<th>Status</th>
+				</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>user_id Ascending <br>created_at Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>table_workout_category</td>
+					<td>created_by Ascending <br>title Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>user_role Ascending <br>full_name Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending<br> full_name Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>created_by Ascending <br>created_at Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending <br>membership_timestamp Descending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>workout_category</td>
+					<td>created_by Ascending <br>title Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending <br>full_name Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>table_membership</td>
+					<td>created_by Ascending <br>member_count Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>user_id Ascending<br> created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>user_id Ascending <br>user_role Ascending <br>created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>created_by Ascending <br>user_role Ascending<br> created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>created_by Ascending <br>payment_status Ascending<br>created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>workouts</td>
+					<td>created_by Ascending <br>workout_type Descending<br> created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>payment_status Ascending <br>user_id Ascending <br>created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending <br>membership_timestamp Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending <br>created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>users</td>
+					<td>created_by Ascending <br>user_role Ascending <br>membership_timestamp Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>workouts</td>
+					<td>created_by Ascending <br>workout_type Ascending</td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>workouts</td>
+					<td>created_by Ascending <br>workout_type Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>payment_history</td>
+					<td>created_by Ascending <br>created_at Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+					<tr>
+					<td>workouts</td>
+					<td>selected_member Arrays<br> workout_type Descending </td>
+					<td>Collection</td>
+					<td>Enabled</td>
+					</tr>
+				   </table>
+				  
 				   </p>
-				   
+				   <p><strong>Step 3: add MD5, SHA1 and SHA-256 Key in firebase</strong>
+				   <li>Open Terminal.</li>
+				   <li>Go to android folder.</li>
+				   <li>Then Run this command <strong>./gradlew signingReport</strong></li>
+				   <li>Then Copy the key and paste it to the address below</li>
+				   <li>Click on the gear icon in the upper-left corner to access project settings.</li>
+				   <li>In the Project Settings page, scroll down to the section titled "CrossFit" and find the Android app for which you want to add the keys. If you haven't added an Android app yet, click on the "Add app" button and follow the instructions to register your app.</li>
+				   <li>Once you have selected the Android app, you'll see the app's configuration details.</li>
+				   <li>Look for the section titled "SHA certificate fingerprints" and click on the "Add fingerprint" button.</li>
+				   <li>In the dialog that appears, enter the SHA-1 key in the provided field.</li>
+				   <li>Optionally, you can also add SHA-256 and MD5 keys by clicking on the "Add another fingerprint" link and entering the respective keys in the provided fields.</li>
+				   <li>Click on the "Save" button to add the keys to your Firebase project.</li>
+				   </p>
 		</section>
 		<section id="set-up-email-notification">
 				   <h3><strong>4).<u>Set Up Email Notification</u></strong></h3>
