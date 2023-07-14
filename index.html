@@ -103,9 +103,9 @@ rel="stylesheet" type="text/css">
 			<li><a href="#member_view">Member</a></li>
 						</ul></li>
 			<li><a href="#stripe_integration">Stripe Payment GateWay Set up</a></li>
-			<li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
-
-			        </ul>
+			<li><a href="#paypal-integration">PayPal Payment GateWay Set up</a></li>
+			<li><a href="#faq">FAQ</a></li><li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
+			</ul>
 
         </aside>
       </div>
@@ -192,7 +192,47 @@ rel="stylesheet" type="text/css">
 				   <li>In the "Sign-in method" tab, you'll find a list of sign-in providers. Enable the desired sign-in method(s) you want to use, such as Email/Password, Google, Facebook, etc.</li>
 				   <li>Follow on the top step and enable bellow methods</li>
 				   <img alt="" src="images/application/signMethod.png">
-				   <p><strong>Step 4: Add your app Indexes</strong>
+				   
+				   
+				   <p><strong>Step 4: Change your Firease Databse rules</strong>
+				    <li>Click on the "Firebase Database" tab in the left sidebar to navigate to the Firebase Database section.</li>
+				   <li>In the Database section, you will see a "Rules" tab. Click on it to access the database rules editor.</li>
+				   <li>The rules editor allows you to define the security rules for your database. You can write rules using the Firebase Database Security Rules language.</li>
+				   <li>Copy the below Rules then paste this Rules</li>
+				   <p>&nbsp;&nbsp;&nbsp rules_version = '2';<br>
+						&nbsp;&nbsp;&nbsp service cloud.firestore {<br>
+						&nbsp;&nbsp;&nbsp match /databases/{database}/documents {<br>
+						&nbsp;&nbsp;&nbsp match /{document=**} {<br>
+						&nbsp;&nbsp;&nbsp allow read, write: if request.auth != null;<br>
+						&nbsp;&nbsp;&nbsp allow read: if request.auth == null;<br>
+						&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp }<br>
+						&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp	}<br>
+						&nbsp;&nbsp;&nbsp }<br>
+						</p>
+				   <li>Once you have made the necessary changes to the rules, click on the "Publish" button to save and apply the new rules to your database.</li>
+				   <li>Firebase will validate the new rules for any syntax errors or potential security issues. If there are any errors, Firebase will provide feedback on the errors and suggestions to fix them.</li>
+				   <li>If the rules are successfully validated, Firebase will apply the new rules to your database.</li>
+				   
+				    <p><strong>Step 5: Change your storage rules</strong>
+				   <li>Click on the "Storage" tab in the left sidebar to navigate to the Firebase Database section.</li>
+				   <li>In the Storage section, you will see a "Rules" tab. Click on it to access the Storage rules editor.</li>
+				   <li>The rules editor allows you to define the security rules for your Storage. You can write rules using the Storage Rules language.</li>
+				   <li>Copy the below Rules then paste this Rules</li>
+				   <p>&nbsp;&nbsp;&nbsp rules_version = '2';<br>
+						&nbsp;&nbsp;&nbsp service firebase.storage {<br>
+						&nbsp;&nbsp;&nbsp match /b/{bucket}/o {<br>
+						&nbsp;&nbsp;&nbsp match /{allPaths=**} {<br>
+						&nbsp;&nbsp;&nbsp  allow read, write: if request.auth != null;<br>
+						&nbsp;&nbsp;&nbsp allow read, write: if request.auth == null;<br>
+						&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp }<br>
+						&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp	}<br>
+						&nbsp;&nbsp;&nbsp }<br>
+						</p>
+				   <li>Once you have made the necessary changes to the rules, click on the "Publish" button to save and apply the new rules to your database.</li>
+				   <li>Firebase will validate the new rules for any syntax errors or potential security issues. If there are any errors, Firebase will provide feedback on the errors and suggestions to fix them.</li>
+				   <li>If the rules are successfully validated, Firebase will apply the new rules to your Storage.</li>
+				   
+				   <p><strong>Step 6: Add your app Indexes</strong>
 				   <li>Click on "Firestore Database" → then click on "Indexes tab" → and finally click on "Add Index" Thne Fill Detail Like This Image.</li>
 				   <img alt="" src="images/application/addIndexing.png"></br>
 				   <li>After configuring the index, click on the "Create Index" button to add it to your Firestore database.</li>
@@ -340,7 +380,7 @@ rel="stylesheet" type="text/css">
 				   </table>
 				  
 				   </p>
-				   <p><strong>Step 3: Add SHA1 and SHA-256 Key in firebase</strong>
+				   <p><strong>Step 7: Add SHA1 and SHA-256 Key in firebase</strong>
 				   <li>Open Terminal.</li>
 				   <li>Go to android folder.("D:\user\gym_trainer_app\android\")</li>
 				   <li>Then Run this command <strong>./gradlew signingReport</strong></li>
@@ -378,7 +418,6 @@ rel="stylesheet" type="text/css">
 				   <img alt="" src="images/application/change-smtp-details.png"></br></br>
 				   <li>Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li>
 				   <li>SendinblueSMTPPassword is your SMTP Master PassWord.</li></br>
-
 				   </p>
 				   
 		</section>
@@ -503,7 +542,7 @@ rel="stylesheet" type="text/css">
 <strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin123</p>
 	<img class="image-container" alt="" src="images/application/admin-view.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
 	<img class="image-container" alt="" src="images/application/admin-drawer.png" height = "400" width = "200">
-	<h5>i). Change Admin Email And Password</h5>
+	<h5 id = "edit-admin-email-or-password">i). Change Admin Email And Password</h5>
 	<li>Open the app and navigate to the Drawer Menu.</li>
 	<li>Select the "Profile" option from the menu to open the profile screen.</li>
 	<img class="image-container" alt="" src="images/application/change-password.png" height = "400" width = "200">
@@ -513,7 +552,7 @@ rel="stylesheet" type="text/css">
 	<li>After making the necessary changes, click on the "Save" button to save the updated information.</li>
 		</section>
 		<br>
-			<h5>ii). Add Trainer in Admin</h5>
+			<h5 id = "add-trainer" > ii). Add Trainer in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer" option from the menu to open the trainer screen.</li>
 			<img class="image-container" alt="" src="images/application/addtrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -524,7 +563,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "Add Trainer" button to save the trainer.</li>
 			<br>
 				
-			<h5>iii). Add Trainer Package in Admin</h5>
+			<h5 id = "trainer-packages">iii). Add Trainer Package in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
 			<img class="image-container" alt="" src="images/application/addtrainerpackage.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -535,7 +574,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "Add Packages" button to save the trainer package.</li>
 			<br>
 			
-			<h5>iv). Assign Trainer Package in Admin</h5>
+			<h5 id = "assign-trainer-packages">iv). Assign Trainer Package in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
 			<img class="image-container" alt="" src="images/application/assigntrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -553,7 +592,7 @@ rel="stylesheet" type="text/css">
 			</section>
 			<br>
 			
-			<h5>i). Add Member in Trainer</h5>
+			<h5 id = "add-member">i). Add Member in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Member" option from the menu to open the Member Screen.</li>
 			<img class="image-container" alt="" src="images/application/addmember.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -564,7 +603,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "SAVE" button to save the member.</li>
 			<br>
 			
-			<h5>ii). Assign Membership in Trainer</h5>
+			<h5 id = "assign-membership">ii). Assign Membership in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
 			<img class="image-container" alt="" src="images/application/assign membership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -573,7 +612,7 @@ rel="stylesheet" type="text/css">
 			<li>Select the member and click on the "ASSIGN TO MEMBER" button to assign the Membership.</li>
 			<br>
 			
-			<h5>iii). Add Membership Plan in Trainer</h5>
+			<h5 id = "add-membership">iii). Add Membership Plan in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
 			<img class="image-container" alt="" src="images/application/addmembership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -584,7 +623,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "ADD MEMBERSHIP" button to save the membership.</li>
 			<br>
 			
-			<h5>iv). Add Workout Category in Trainer</h5>
+			<h5 id = "add-workout-category">iv). Add Workout Category in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Workout Category" option from the menu to open the Workout Category Screen.</li>
 			<img class="image-container" alt="" src="images/application/workoutcategory.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -595,7 +634,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "ADD CATEGORY" button to add the Workout Category.</li>
 			<br>
 			
-			<h5>v). Add Exercise in Trainer</h5>
+			<h5 id = "add-exercise">v). Add Exercise in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Exercise" option from the menu to open the Exercise Screen.</li>
 			<img class="image-container" alt="" src="images/application/addexercise.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -606,7 +645,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "SAVE" button to add the Exercise.</li>
 			<br>
 			
-				<h5>vi). Add Workout in Trainer</h5>
+				<h5 id = "add-workout">vi). Add Workout in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Workout" option from the menu to open the Workout Screen.</li>
 			<img class="image-container" alt="" src="images/application/addworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -617,7 +656,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "SAVE" button to save the Workout.</li>
 			<br>
 			
-				<h5>vii). Add Class Schedule in Trainer</h5>
+				<h5 id = "add-class-schedule">vii). Add Class Schedule in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
 			<img class="image-container" alt="" src="images/application/classschedule.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -635,7 +674,7 @@ rel="stylesheet" type="text/css">
 		</section>
 		<br>
 		
-		<h5>i). Add Measurement of Member</h5>
+		<h5 id = "add-measurement">i). Add Measurement of Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Measurement" option from the menu to open the Measurement Screen.</li>
 			<img class="image-container" alt="" src="images/application/measurement.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -643,7 +682,7 @@ rel="stylesheet" type="text/css">
 			<li>After filling the information, click on the "SAVE" button to add the Measurement.</li>
 			<br>
 			
-			<h5>ii). Workout of Member</h5>
+			<h5 id = "start-workout">ii). Workout of Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "My Workout" option from the menu to open the My Workout Screen.</li>
 			<img class="image-container" alt="" src="images/application/myworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -655,7 +694,7 @@ rel="stylesheet" type="text/css">
 			<li>Click on the "START" button for video refrence of that particular workout type.</li>
 			<br>
 			
-			<h5>iii). Join Class in Member</h5>
+			<h5 id = "join-class">iii). Join Class in Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
 			<img class="image-container" alt="" src="images/application/attain class.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -675,14 +714,83 @@ rel="stylesheet" type="text/css">
  <img class="image-container" alt="" src="images/application/stripe_setting.png" height = "400" width = "200">
 			<li>Replace your "Secret Key" and "Publishable key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
-			<li>1). Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
+			<p>1). Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
 			2). Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
 			3). Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
 			4). Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
 			5). Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
 			6). Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
 			7). Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
-			</li>
+			</p>
+			<br>
+			</section>
+			
+			<section id="paypal-integration">
+			<h3><strong>11).<u>PayPal Payment GateWay Set up</u></strong></h3>
+			<li>If you don't already have a PayPal account, visit the PayPal website <strong><a href="https://www.paypal.com/" target="_blank">(https://www.paypal.com/)</a></strong> and you can sign up with Google or create a new account.</li>
+			<img src="images/application/paypalKey.png" height = "200" width = "800">
+			<li>Just open PayPal Dashboard And  
+			Click on "API credentials" then Copy Client Id and Secret key then Replace Your Keys in Mobile Screen </li>
+			<img class="image-container" alt="" src="images/application/paypal.png" height = "400" width = "200">
+			<li>Replace your "Client Id" and "Secret key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
+			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
+			<p>
+			1). Click on top-right side "Live".<br>
+			2). Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
+			3). Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
+			4). Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
+			5). Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
+			6). Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
+			7). Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
+			8). Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
+			9). Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
+			10). Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
+			11). Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
+			</section>
+			
+			<section id = "faq"> 
+			<h3> <strong>12).<u>FAQ</u></strong></h3>
+			<P>1). How to Edit Email or Password for Admin ? <br>
+			Ans. if you don't know how Edit Email or Password please follow this steps.<a href="#edit-admin-email-or-password">(click here)</a></p>
+			
+			<P>2). How to add trainer ? <br>
+			Ans. if you don't know how to add trainer please follow this steps.<a href="#add-trainer">(click here)</a></p>
+			
+			<P>3). How to add trainer packages? <br>
+			Ans. if you don't know how to add trainer pakages please follow this steps.<a href="#trainer-packages">(click here)</a></p>
+			
+			<P>4). How to assign trainer packages? <br>
+			Ans. if you don't know how to assign trainer packages please follow this steps.<a href="#assign-trainer-packages">(click here)</a></p>
+			
+			<P>5). How to add member ? <br>
+			Ans. if you don't know how to add Member please follow this steps.<a href="#add-member">(click here)</a></p>
+			
+			<P>6). How to add membership ? <br>
+			Ans. if you don't know how to add membership please follow this steps.<a href="#add-membership">(click here)</a></p>
+			
+			<P>7). How to assign membership ? <br>
+			Ans. if you don't know how to assign membership please follow this steps.<a href="#assign-membership">(click here)</a></p>
+			
+			<P>8). How to add workout ? <br>
+			Ans. if you don't know how to add workout please follow this steps.<a href="#add-workout">(click here)</a></p>
+			
+			<P>9). How to add workout category ? <br>
+			Ans. if you don't know how to add workout category please follow this steps.<a href="#add-workout-category">(click here)</a></p>
+			
+			<P>10). How to add exercise ? <br>
+			Ans. if you don't know how to add exercise please follow this steps.<a href="#add-exercise">(click here)</a></p>
+			
+			<P>11). How to add class schedule ? <br>
+			Ans. if you don't know how to add class schedule follow this steps.<a href="#add-class-schedule">(click here)</a></p>
+			
+			<P>12). How to add measurement ? <br>
+			Ans. if you don't know how to add measurement please follow this steps.<a href="#add-measurement">(click here)</a></p>
+			
+			<P>13). How to start workout ? <br>
+			Ans. if you don't know how to start workout please follow this steps.<a href="#start-workout">(click here)</a></p>
+			
+			<P>14). How to join class ? <br>
+			Ans. if you don't know how to join class please follow this steps.<a href="#join-class">(click here)</a></p>
 			</section>
 			
 
