@@ -393,6 +393,37 @@ rel="stylesheet" type="text/css">
 				   <li>also add SHA-256 keys by clicking on the "Add another fingerprint" link and entering the respective keys in the provided fields.</li>
 				   <li>Click on the "Save" button to add the keys to your Firebase project.</li>
 				   </p>
+				   
+				    <p><strong>Step 8: Deploy firebase function</strong>
+					<p>Following bellow steps to genrate google-service-key</p>
+					<li>Go to the Google Cloud Console:<a href="https://console.cloud.google.com/" target="_blank"> https://console.cloud.google.com/</a></li>
+					<li>Click on the project drop-down and select "Project."</li>
+					<li>In the Google Cloud Console, click on the menu icon (☰) in the top-left corner.</li>
+					<li>Under the "IAM & Admin" section, select "Service accounts."</li>
+					<li>Click on the "+ CREATE SERVICE ACCOUNT" button.</li>
+					<li>Provide a name for the service account.</li>
+					<li>You can optionally provide a description for the service account.</li>
+					<li>Click on the "CREATE" button.</li>
+					<li>In the "Create a new service account" window, you can choose to assign roles to the service account. Roles determine what permissions the service account has.</li>
+					<li>Select the appropriate role(s) from the list, or you can assign roles later.</li>
+					<li>After creating the service account, you'll be prompted to create a key. Click on the "CREATE KEY" button.</li>
+					<li>Choose the key type. For service account keys, it's recommended to use JSON format.</li>
+					<li>Click on the "CREATE" button.</li>
+					<li>The service key will be generated, and a JSON file containing the key will be downloaded to your computer.</li>
+					<li>Store the downloaded JSON file containing the service key securely on your server or in your application's environment.</li>
+					<li>Avoid committing the key to version control systems or sharing it publicly.</li>
+					<br>
+					<p>Set up Firebase Project</p>
+					<li>If you haven't already, create a Firebase project and set up Firebase in your project directory. You can do this using the Firebase CLI (Command Line Interface). Install the Firebase CLI if you haven't already by running:</li>
+					<li><strong>npm install -g firebase-tools</strong></li>
+					<li>Then, log in to your Google account with Firebase CLI:</li>
+					<li><strong>firebase login</strong></li>
+					<li>aftre, Put file on below path and rename this file name to <strong>google-service-key.json</strong></li>
+					<li><strong>gym_trainer_app\crossfit_firebase_functions\functions</strong></li>
+					<li>Once you are ready to deploy your Firebase Functions to the cloud, use the following command from your project's root directory:</li>
+					<li><strong>firebase deploy --only functions</strong></li>
+					<li>This command will upload your functions to Firebase, and after a successful deployment, you'll receive URLs for any HTTP functions you've defined.</li>
+					</p>
 		</section>
 		<section id="set-up-email-notification">
 				   <h3><strong>4).<u>Set Up Email Notification</u></strong></h3>
@@ -415,8 +446,8 @@ rel="stylesheet" type="text/css">
 				   <img alt="" src="images/application/smtp-api.png"></br>
 				   <li>Now, you'll need to integrate Sendinblue with your application or platform. Sendinblue provides various integration options, such as SMTP, API, plugins, and libraries. Choose the integration method that suits your needs.</li>
 				   <li>Click Generate a new SMTP key. Add the name of your SMTP key and Generate then copy this smtp key.</li></br>
-				   <img alt="" src="images/application/change-smtp-details.png"></br></br>
-				   <li>Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li>
+				   <img alt="" src="images/application/sendinBlueDetail.png" height = "400" width = "200"></br></br>
+				   <li>Go to this path <strong>"Admin Setting -> Email Setting"</strong> then Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li>
 				   <li>SendinblueSMTPPassword is your SMTP Master PassWord.</li></br>
 				   </p>
 				   
