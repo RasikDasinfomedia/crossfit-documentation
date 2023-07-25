@@ -397,7 +397,7 @@ rel="stylesheet" type="text/css">
 				    <p><strong>Step 8: Deploy firebase function</strong>
 					<p>Following bellow steps to genrate google-service-key</p>
 					<li>Go to the Google Cloud Console:<a href="https://console.cloud.google.com/" target="_blank"> https://console.cloud.google.com/</a></li>
-					<li>Click on the project drop-down and select "Project."</li>
+					<li>Click on the project drop-down and select Project.</li>
 					<li>In the Google Cloud Console, click on the menu icon (☰) in the top-left corner.</li>
 					<li>Under the "IAM & Admin" section, select "Service accounts."</li>
 					<li>Click on the "+ CREATE SERVICE ACCOUNT" button.</li>
@@ -411,7 +411,6 @@ rel="stylesheet" type="text/css">
 					<li>Click on the "CREATE" button.</li>
 					<li>The service key will be generated, and a JSON file containing the key will be downloaded to your computer.</li>
 					<li>Store the downloaded JSON file containing the service key securely on your server or in your application's environment.</li>
-					<li>Avoid committing the key to version control systems or sharing it publicly.</li>
 					<br>
 					<p>Set up Firebase Project</p>
 					<li>If you haven't already, create a Firebase project and set up Firebase in your project directory. You can do this using the Firebase CLI (Command Line Interface). Install the Firebase CLI if you haven't already by running:</li>
@@ -745,13 +744,13 @@ rel="stylesheet" type="text/css">
  <img class="image-container" alt="" src="images/application/stripe_setting.png" height = "400" width = "200">
 			<li>Replace your "Secret Key" and "Publishable key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
-			<p>1). Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
-			2). Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
-			3). Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
-			4). Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
-			5). Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
-			6). Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
-			7). Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
+			<p><strong>1).</strong> Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
+			<strong>2).</strong> Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
+			<strong>3).</strong> Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
+			<strong>4).</strong> Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
+			<strong>5).</strong> Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
+			<strong>6).</strong> Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
+			<strong>7).</strong> Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
 			</p>
 			<br>
 			</section>
@@ -766,17 +765,17 @@ rel="stylesheet" type="text/css">
 			<li>Replace your "Client Id" and "Secret key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
 			<p>
-			1). Click on top-right side "Live".<br>
-			2). Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
-			3). Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
-			4). Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
-			5). Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
-			6). Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
-			7). Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
-			8). Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
-			9). Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
-			10). Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
-			11). Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
+			<strong>1).</strong> Click on top-right side "Live".<br>
+			<strong>2).</strong> Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
+			<strong>3).</strong> Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
+			<strong>4).</strong> Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
+			<strong>5).</strong> Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
+			<strong>6).</strong> Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
+			<strong>7).</strong> Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
+			<strong>8).</strong> Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
+			<strong>9).</strong> Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
+			<strong>10).</strong> Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
+			<strong>11).</strong> Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
 			</section>
 			
 			<section id = "faq"> 
