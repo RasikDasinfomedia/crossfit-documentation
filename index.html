@@ -403,11 +403,25 @@ rel="stylesheet" type="text/css">
 					<td>&nbsp;&nbsp;&nbsp Collection</td>
 					<td>&nbsp;&nbsp;&nbsp Enabled</td>
 					</tr>
+					<tr>
+					<td>&nbsp;&nbsp;&nbsp payment_history</td>
+					<td>&nbsp;&nbsp;&nbsp created_by Ascending<br>&nbsp;&nbsp;&nbsp  payment_status Ascending <br>&nbsp;&nbsp;&nbsp  user_role Ascending <br>&nbsp;&nbsp;&nbsp  created_at Ascending </td>
+					<td>&nbsp;&nbsp;&nbsp Collection</td>
+					<td>&nbsp;&nbsp;&nbsp Enabled</td>
+					</tr>
+					<tr>
+					<td>&nbsp;&nbsp;&nbsp payment_history</td>
+					<td>&nbsp;&nbsp;&nbsp payment_status Ascending<br>&nbsp;&nbsp;&nbsp  user_id Ascending <br>&nbsp;&nbsp;&nbsp  created_at Ascending </td>
+					<td>&nbsp;&nbsp;&nbsp Collection</td>
+					<td>&nbsp;&nbsp;&nbsp Enabled</td>
+					</tr>
 				   </table>
 				  
 				   </p>
 				   <p><strong>Step 7: Add SHA1 and SHA-256 Key in firebase</strong>
 				   <li>Open Terminal.</li>
+				   <li>flutter clean</li>
+					<li>flutter pub get</li>
 				   <li>Go to android folder.("D:\user\gym_trainer_app\android\")</li>
 				   <li>Then Run this command <strong>./gradlew signingReport</strong></li>
 				   <li>Then Copy the SHA1 and SHA-256 key and paste it to the address below</li>
@@ -543,7 +557,7 @@ rel="stylesheet" type="text/css">
 				</ul>
 			<li>Clean and rebuild the project: Run the following command in the root directory of your project to clean and rebuild your Flutter project:</li>
 			<ul>
-				<li>• flutter clean<li>
+				<li>• flutter clean</li>
 				<li>• flutter pub get</li>
 				<li>• flutter run</li>
 				</ul>
