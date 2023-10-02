@@ -499,23 +499,19 @@ rel="stylesheet" type="text/css">
 		</p>
         <ol>
         <li>Open the Flutter project in your preferred integrated development environment (IDE) or code editor.</li>
-        <li>Locate the <strong>pubspec.yaml</strong> file in the root directory of your Flutter project.</li>
-        <li>Open the <strong>pubspec.yaml</strong>  file and find the <strong>name </strong> field. By default, it should be something like <strong>name: your_app_name</strong>.</li>
-        <li>Change the value of the <strong>name </strong> field to your desired app name. Make sure to follow the naming conventions for Flutter projects (lowercase letters, underscores instead of spaces, etc.). For example, you can change it to <strong>name: my_flutter_app</strong>.</li>
-		<li>Save the <strong>pubspec.yaml</strong> file.</li>
-		<li>Open the <strong>android</strong> directory in your Flutter project.</li>
-		<li>Locate the <strong>app</strong> directory inside the <strong>android</strong> directory and open it.</li>
-		<li>Inside the <strong>app</strong> directory, find the <strong>build.gradle</strong> file (usually located at <strong>android/app/build.gradle</strong>).</li>
-		<li>Open the <strong>build.gradle</strong> file and locate the <strong>defaultConfig</strong> section.</li>
-		<li>In the <strong>defaultConfig</strong> section, find the <strong>applicationId<strong> field. The value of this field represents the unique identifier of your app.</li>
-		<li>Change the value of the <strong>applicationId<strong> field to match your desired app package name. The package name should typically follow the reverse domain name notation. For example, if your domain is <strong>example.com</strong>, you can use <strong>applicationId: com.example.myflutterapp</strong>.</li>
-		<li>Save the <strong>build.gradle</strong> file.</li>
+		<li>Now, you need to update the app name in the Android configuration.</li>
+		<li>Follow below steps and you can change your app name.</li>
+		<li>First you go your app in android folder in same path <strong>"android -> app -> src -> main -> AndroidManifest.xml" </strong></li>
+		<li>after in "AndroidManifest.xml" you find <strong>"label"</strong> keyword and change your app name</li>
+		<li>if you need change your apk name ypu can follow this below steps</li>
+		<li>First you go your app in android folder in same path <strong>"android -> app -> src -> build.gradle"</strong></li>
+		<li>after in "build.gradle" you find <strong>"setProperty"</strong> keyword. in this property app name is second number. you can change this app name with your app name </li>
 		<li>Now, you need to update the app name in the iOS configuration.</li>
 		<li>Open the <strong>ios</strong> directory in your Flutter project.</li>
 		<li>Inside the <strong>ios</strong> directory, find the <strong>Runner</strong> directory and open it.</li>
 		<li>Locate the <strong>Info.plist</strong> file (usually located at <strong>ios/Runner/Info.plist</strong>).</li>
-		<li>Open the <strong>Info.plist<strong> file and find the <strong><key>CFBundleName</key></strong> section.</li>
-		<li>Change the value of the <strong><string></strong> tag below <strong><key>CFBundleName</key></strong> to your desired app name. For example, <strong><string>My Flutter App</string></strong>.</li>
+		<li>Open the <strong>Info.plist<strong> file and find the <strong><key>CFBundleDisplayName</key></strong> section.</li>
+		<li>Change the value of the <strong><string></strong> tag below <strong><key>CFBundleDisplayName</key></strong> to your desired app name. For example, <strong><string>CrossFit App</string></strong>.</li>
 		<li>Save the <strong>Info.plist</strong> file.</li>
 		</ol> 
 		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
@@ -538,17 +534,18 @@ rel="stylesheet" type="text/css">
  <h3><strong>7).<u>Changing package name</u></strong></h3>
 	<p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
         <ol>
-            <li>Rename the package folder: Open the root directory of your Flutter project and navigate to the lib folder. Rename the package folder to the desired new package name.</li>
-			<li>Update the package name in the pubspec.yaml file: Open the pubspec.yaml file located in the root directory of your project. Update the name field with the new package name.</li>
 			<li>Update the Android package name:</li>
 			<ul>
 				<li>• Open the AndroidManifest.xml file located at android/app/src/main/AndroidManifest.xml.<li>
 				<li>• Change the package attribute of the <manifest> tag to the new package name.</li>
+				<li>• also you need change <strong>"applicationId"</strong> with your application package name</li>
+				<li>• you go this path <strong>"android -> app -> src -> build.gradle	"</strong>and change <strong>"applicationId"</strong></li>
 				</ul>
             <li>Update the iOS bundle identifier:</li>
 			<ul>
 				<li>• Open the Info.plist file located at ios/Runner/Info.plist.<li>
-				<li>• Change the value of the CFBundleIdentifier key to the new package name.</li>
+				<li>• Change the value of the CFBundleIdentifier key to the new package name.Open the <strong>Info.plist</strong> file and find the <strong><key>CFBundleName</key></strong> section.
+		Change the value of the <strong><string></strong> tag below <strong><key>CFBundleName</key></strong> to your desired app bundal name. For example, <strong>"<string>crossfit.personaltrainer.gymtrainer.fitness</string>"</strong>.</li>
 				</ul>
             <li>Update import statements and references:</li>
 			<ul>
