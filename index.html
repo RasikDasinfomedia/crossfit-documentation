@@ -91,22 +91,22 @@ rel="stylesheet" type="text/css">
 			  			  <li><a href="#flutter-version">Flutter Version</a></li>
 
 			  <li><a href="#set-up-firebase-project">set up Firebase</a></li>
-			  <li><a href="#set-up-email-notification">set up Email Notification</a></li>
 			  			   <li><a href="#change-app-name">Change App Name</a></li>
 			   <li><a href="#change-logo">Change App Logo</a></li>
 			   <li><a href="#change-packae-name">Change Package Name</a></li>
 			   			<li><a href="#relece_build">Create Release Build</a></li>
-				  <li><a href="#app_pages">CrossFit App Overview</a>
+				  <li><a href="#app_pages">ExpoLeads App Overview</a>
 				  <ul><li><a href="#fronted-login">Login Screen</a></li>
 			<li><a href="#admin_view">Admin</a></li>
-			<li><a href="#trainer_view">Trainer</a></li>
-			<li><a href="#member_view">Member</a></li>
-			<li><a href="#gust_view">Guest</a></li>
+			<li><a href="#profile_view">Profile</a></li>
+			<li><a href="#quick_scan_view">Quick Scan</a></li>
+			<li><a href="#contact_list_view">Contact List</a></li>
+			<li><a href="#contact_detail_view">Contact Detail</a></li>
 						</ul></li>
-			<li><a href="#stripe_integration">Stripe Payment GateWay Set up</a></li>
-			<li><a href="#paypal-integration">PayPal Payment GateWay Set up</a></li>
-			<li><a href="#in-app-purchase-integration">In App Purchase Set up</a></li>
-			<li><a href="#faq">FAQ</a></li><li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
+
+			<li><a href="#faq">FAQ</a></li>
+			<li><a href="#logout">Logout</a></li>
+			<li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
 			</ul>
 
         </aside>
@@ -200,7 +200,7 @@ rel="stylesheet" type="text/css">
 				   <li>Click on the "Sign-in method" tab.</li>
 				   <li>In the "Sign-in method" tab, you'll find a list of sign-in providers. Enable the desired sign-in method(s) you want to use, such as Email/Password, Google, Facebook, etc.</li>
 				   <li>Follow on the top step and enable bellow methods</li>
-				   <img alt="" src="images/application/signMethod.png">
+				   <img alt="" src="images/application/signMethod.png">1
 				   
 				   
 				   <p><strong>Step 4: Change your Firease Database rules</strong>
@@ -241,185 +241,8 @@ rel="stylesheet" type="text/css">
 				   <li>Firebase will validate the new rules for any syntax errors or potential security issues. If there are any errors, Firebase will provide feedback on the errors and suggestions to fix them.</li>
 				   <li>If the rules are successfully validated, Firebase will apply the new rules to your Storage.</li>
 				   
-				   <p><strong>Step 6: Add your app Indexes</strong>
-				   <li>Click on "Firestore Database" → then click on "Indexes tab" → and finally click on "Add Index" Thne Fill Detail Like This Image.</li>
-				   <img alt="" src="images/application/addIndexing.png"></br>
-				   <li>After configuring the index, click on the "Create Index" button to add it to your Firestore database.</li>
-				   <li>Firestore will process the index creation request, which may take some time depending on the size of your database. You can check the status of the index creation on the "Indexes" page. Once the index status changes to "Enabled," the index is ready to use.</li>
-				   <li>Add all the Indexes below by following the above steps</li>
-				   <table>
-				   <tr>
-					<th>Collection ID</th>
-					<th>Fields indexed help_outline</th>
-					<th>Query scope</th>
-					<th>Status</th>
-				</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp user_id Ascending <br>&nbsp;&nbsp;&nbsp created_at Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp table_workout_category</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp title Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp user_role Ascending <br>&nbsp;&nbsp;&nbsp full_name Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending<br> &nbsp;&nbsp;&nbsp full_name Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp created_at Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp membership_timestamp Descending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp workout_category</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp title Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp full_name Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp table_membership</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp member_count Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp user_id Ascending<br>&nbsp;&nbsp;&nbsp  created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp user_id Ascending <br>&nbsp;&nbsp;&nbsp user_role Ascending <br>&nbsp;&nbsp;&nbsp created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp user_role Ascending<br>&nbsp;&nbsp;&nbsp  created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp payment_status Ascending<br>&nbsp;&nbsp;&nbsp created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp workouts</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp workout_type Descending<br>&nbsp;&nbsp;&nbsp  created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp payment_status Ascending <br>&nbsp;&nbsp;&nbsp user_id Ascending <br>&nbsp;&nbsp;&nbsp created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp membership_timestamp Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp user_role Ascending <br>&nbsp;&nbsp;&nbsp membership_timestamp Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp workouts</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp workout_type Ascending</td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp workouts</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp workout_type Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp created_at Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp workouts</td>
-					<td>&nbsp;&nbsp;&nbsp selected_member Arrays<br>&nbsp;&nbsp;&nbsp  workout_type Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending <br>&nbsp;&nbsp;&nbsp user_role Ascending <br>&nbsp;&nbsp;&nbsp membership_timestamp  Ascending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp users</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending<br>&nbsp;&nbsp;&nbsp  user_role Ascending <br>&nbsp;&nbsp;&nbsp  full_name Descending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending<br>&nbsp;&nbsp;&nbsp  user_role Ascending <br>&nbsp;&nbsp;&nbsp  created_at Ascending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp created_by Ascending<br>&nbsp;&nbsp;&nbsp  payment_status Ascending <br>&nbsp;&nbsp;&nbsp  user_role Ascending <br>&nbsp;&nbsp;&nbsp  created_at Ascending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-					<tr>
-					<td>&nbsp;&nbsp;&nbsp payment_history</td>
-					<td>&nbsp;&nbsp;&nbsp payment_status Ascending<br>&nbsp;&nbsp;&nbsp  user_id Ascending <br>&nbsp;&nbsp;&nbsp  created_at Ascending </td>
-					<td>&nbsp;&nbsp;&nbsp Collection</td>
-					<td>&nbsp;&nbsp;&nbsp Enabled</td>
-					</tr>
-				   </table>
-				  
 				   </p>
-				   <p><strong>Step 7: Add SHA1 and SHA-256 Key in firebase</strong>
+				   <p><strong>Step 6: Add SHA1 and SHA-256 Key in firebase</strong>
 				   <li>Open Terminal.</li>
 				   <li>flutter clean</li>
 					<li>flutter pub get</li>
@@ -435,7 +258,7 @@ rel="stylesheet" type="text/css">
 				   <li>Click on the "Save" button to add the keys to your Firebase project.</li>
 				   </p>
 				   
-				    <p><strong>Step 8: Deploy firebase function</strong>
+				    <p><strong>Step 7: Deploy firebase function</strong>
 					<p>Following bellow steps to genrate google-service-key</p>
 					<li>Go to the Google Cloud Console:<a href="https://console.cloud.google.com/" target="_blank"> https://console.cloud.google.com/</a></li>
 					<li>Click on the project drop-down and select Project.</li>
@@ -459,43 +282,17 @@ rel="stylesheet" type="text/css">
 					<li>Then, log in to your Google account with Firebase CLI:</li>
 					<li><strong>firebase login</strong></li>
 					<li>aftre, Put file on below path and rename this file name to <strong>google-service-key.json</strong></li>
-					<li><strong>gym_trainer_app\crossfit_firebase_functions\functions</strong></li>
+					<li><strong>expoleads_app\expoleads_firebase_functions\functions</strong></li>
 					<li>Once you are ready to deploy your Firebase Functions to the cloud, use the following command from your project's root directory:</li>
 					<li><strong>firebase deploy --only functions</strong></li>
 					<li>This command will upload your functions to Firebase, and after a successful deployment, you'll receive URLs for any HTTP functions you've defined.</li>
 					</p>
 		</section>
-		<section id="set-up-email-notification">
-				   <h3><strong>4).<u>Set Up Email Notification</u></strong></h3>
-				   <p>To set up Email Notification for a CrossFit app, follow these step-by-step instructions:</p>
-				   <p>
-				   <strong>Step 1: Create a Sendinblue account</strong>
-				   <li>Go to the Sendinblue website using your preferred web browser.Go to the Sendinblue website using your preferred web browser. The website URL is <strong><a href="https://www.sendinblue.com/" target="_blank">(https://www.sendinblue.com/)</a></strong>.</li>
-				   <li>Click on "Sign Up" or "Get Started": On the homepage, you'll usually find a prominent "Sign Up" or "Get Started" button. Click on it to begin the account creation process.</li>
-				   <li>Select your account type: Sendinblue offers different types of accounts based on your needs. Choose the appropriate account type based on the features and functionalities you require. The options usually include "Free," "Lite," "Premium," and "Enterprise."</li>
-				   <li>Fill in the required information: You'll be presented with a form where you need to provide your details. Typically, the form includes fields such as your name, email address, and a password. Fill in the necessary information accurately.</li>
-				   <li>Verify your email address: After completing the form, you'll receive an email from Sendinblue to verify your email address. Click on the verification link provided in the email to confirm your account.</li>
-				   <li>Set up your account: Once your email address is verified, you'll be directed to the Sendinblue dashboard or a setup wizard. Follow the on-screen instructions to configure your account settings, including your organization's name, contact details, and any additional information required.</li>
-				   <li>Explore Sendinblue features: Once your account setup is complete, you can start exploring the various features and functionalities offered by Sendinblue. These may include email marketing, SMS campaigns, automation workflows, contact management, and more.</li>
-				   </p>
-	
-				   <p><strong>Step 2: Connect your app with SMTP & API</strong>
-				   <li>Go Sendinblue dashboard.</li></br>
-				   <img alt="" src="images/application/sendinblue.png"></br></br>
-				   <li>In the SMTP section, you'll find your SMTP credentials. Make a note of the SMTP server, port number, username, and password. You'll need these details to configure your email notifications.</li></br>
-				   <img alt="" src="images/application/smtp-api.png"></br>
-				   <li>Now, you'll need to integrate Sendinblue with your application or platform. Sendinblue provides various integration options, such as SMTP, API, plugins, and libraries. Choose the integration method that suits your needs.</li>
-				   <li>Click Generate a new SMTP key. Add the name of your SMTP key and Generate then copy this smtp key.</li></br>
-				   <img alt="" src="images/application/sendinBlueDetail.png" height = "400" width = "200"></br></br>
-				   <li>Go to this path <strong>"Admin Setting -> Email Setting"</strong> then Changes the value of sendinblueEmailFrom, sendinblueEmailName, sendinblueSMTPServerPort, sendinblueSMTPPassword.</li>
-				   <li>SendinblueSMTPPassword is your SMTP Master PassWord.</li></br>
-				   </p>
-				   
-		</section>
+		
 			 
 		<section id = "change-app-name"> 
 
-<h3> <strong>5).<u>Change Application name</u></strong></h3>
+<h3> <strong>4).<u>Change Application name</u></strong></h3>
         <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
 		</p>
         <ol>
@@ -506,7 +303,8 @@ rel="stylesheet" type="text/css">
 		<li>After in "AndroidManifest.xml" you find <strong>"label"</strong> keyword and change your app name</li>
 		<li>If you need change your apk name ypu can follow this below steps</li>
 		<li>First you go your app in android folder in same path <strong>"android -> app -> src -> build.gradle"</strong></li>
-		<li>After in "build.gradle" you find <strong>"setProperty"</strong> keyword and change the app name</li>
+		<li>After in "build.gradle" you find <strong>"setProperty"</strong> keyword and can change the app name</li>
+		After in "build.gradle" you find "setProperty" keyword and can change the app name
 		<li>Now, you need to update the app name in the iOS configuration.</li>
 		<li>Open the <strong>ios</strong> directory in your Flutter project.</li>
 		<li>Inside the <strong>ios</strong> directory, find the <strong>Runner</strong> directory and open it.</li>
@@ -519,7 +317,7 @@ rel="stylesheet" type="text/css">
 		</section>	  
 			  
 <section id = "change-logo">
-<h3><strong>6).<u>Change Application Logo</u></strong></h3>
+<h3><strong>5).<u>Change Application Logo</u></strong></h3>
 		<p>Change the launcher icon in <code>Replace the default app icons:<br>
 
 <strong> -> </strong>For Android, navigate to the <strong>android/app/src/main/res</strong> directory in your Flutter project. Replace the icons in the mipmap directories with your custom icons, following the size-specific folders (e.g., mipmap-mdpi, mipmap-hdpi, etc.).<br>
@@ -532,7 +330,7 @@ rel="stylesheet" type="text/css">
 
         
 <section id = "change-packae-name">
- <h3><strong>7).<u>Changing package name</u></strong></h3>
+ <h3><strong>6).<u>Changing package name</u></strong></h3>
 	<p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
         <ol>
 			<li>Update the Android package name:</li>
@@ -566,7 +364,7 @@ rel="stylesheet" type="text/css">
 		</section>
 		
 		<section id="relece_build">
-			<h3><strong>8).<u>Sign your release build</u></strong></h3>
+			<h3><strong>7).<u>Sign your release build</u></strong></h3>
 			<p>To sign a release build for CrossFit, you can follow these steps:
 			<br>
 			<strong>Step 1: Generate a keystore file</strong>
@@ -586,7 +384,7 @@ rel="stylesheet" type="text/css">
 		<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
 		</p>
 		<li>Once you complete the form, click <strong>OK</strong>.</li>
-		<img alt="" src="images/application/crossFit-jks.png" height = "400" width = "750"></li>
+		<img alt="" src="images/application/expoleads-jks.png" height = "400" width = "750"></li>
 		<li>Now Replace <strong>crossfit.jks</strong> File and Open <strong>key.properties</strong> File And Change your <strong>.jks</strong> file Detail Like (storePassword, keyPassword, keyAlias, storeFile)</li>
 		<li>Now you can follow these steps and Generate Your Release Apk</li>
 		<img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
@@ -596,7 +394,7 @@ rel="stylesheet" type="text/css">
 	
 		
 		<section id="app_pages">
-			<h3><strong>9).<u>CrossFit App Overview</u></strong></h3>
+			<h3><strong>8).<u>ExpoLeads App Overview</u></strong></h3>
 			</section>
 			<section id="fronted-login">
 			
@@ -608,358 +406,76 @@ rel="stylesheet" type="text/css">
 		</section>
 	
 <section id = "admin_view"> <h4><strong>B). Admin</strong></h4>
-<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin123</p>
+<strong> Login Admin Number And OTP For Demo</strong><p> <strong>Phone :</strong> 9876543210<br><strong>OTP :</strong> 123456</p>
 	<img class="image-container" alt="" src="images/application/admin-view.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
 	<img class="image-container" alt="" src="images/application/admin-drawer.png" height = "400" width = "200">
-	<h5 id = "edit-admin-email-or-password">i). Change Admin Email And Password</h5>
-	<li>Open the app and navigate to the Drawer Menu.</li>
-	<li>Select the "Profile" option from the menu to open the profile screen.</li>
-	<img class="image-container" alt="" src="images/application/change-password.png" height = "400" width = "200">
-	<li>On the top right side of the profile screen, click on the pencil icon.</li>
-	<li>A form will appear where you can enter the new email and password.</li>
-	<li>Input the desired new email and password in the respective fields.</li>
-	<li>After making the necessary changes, click on the "Save" button to save the updated information.</li>
-		</section>
-		<br>
-			<h5 id = "add-trainer" > ii). Add Trainer in Admin</h5>
+	
+			<section id = "profile_view"> <h4><strong>C). Profile</strong></h4>
 			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Trainer" option from the menu to open the trainer screen.</li>
-			<img class="image-container" alt="" src="images/application/addtrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addtrainerdetails.png" height = "400" width = "200">
-			<li>On the top right side of the trainer screen, click on the add user icon to add trainer.</li>
-			<li>A form will appear where you can add the trainer.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "Add Trainer" button to save the trainer.</li>
-			<br>
-				
-			<h5 id = "trainer-packages">iii). Add Trainer Package in Admin</h5>
+			<li>Select the "Profile" option from the menu to open the Profile screen.</li>
+	<img class="image-container" alt="" src="images/application/profile-screen.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+	<img class="image-container" alt="" src="images/application/update-profile-screen.png" height = "400" width = "200">
+			<li>All the details of the user is mentioned in profile screen.</li>
+			<li>Profile details can be deleted by clicking the "Delete my Account" text available in the bottom of Profile Screen.</li>
+			<li>Profile details can be updated by clicking the edit icon available in the app bar.</li>
+			<li>Every details of user can be edited except user's login phone number in Edit Profile Screen.</li>
+			<li>Click on the "Update" button after the changes are made for update the profile successfully.</li>
+			
+			
+			<p><section id = "quick_scan_view"> <h4><strong>D). Quick Scan List</strong></h4>  
+
+			<li>Click the "Quick Scan" card in the dashboard screen or select the Scan QR option available in menu button in the bottom of contact list screen .</li>
+	<img class="image-container" alt="" src="images/application/quick-scan-screen.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+	<img class="image-container" alt="" src="images/application/ocr-screen.png" height = "400" width = "200">
+			<li>User can use flash whenever it needs.</li>
+			<li>OCR text recognizing feature is also available in quick scan screen.</li>
+			<li>Click on OCR button, the OCR screen will appear. Just click the photo having text in it of contact person.</li></p> 
+			
+			 <p><section id = "contact_list_view"> <h4><strong>E). Contact List</strong></h4>  
 			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
-			<img class="image-container" alt="" src="images/application/addtrainerpackage.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addtrainerpackagedetails.png" height = "400" width = "200">
-			<li>On the top right side of the trainer package screen, click on the plus icon to add the trainer package.</li>
-			<li>A form will appear where you can add trainer package.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "Add Packages" button to save the trainer package.</li>
-			<br>
-			
-			<h5 id = "assign-trainer-packages">iv). Assign Trainer Package in Admin</h5>
+			<li>Select the "Contact List" option from the menu or click on the contact card available in the dashboard screen to open the Contact List screen.</li>
+	<img class="image-container" alt="" src="images/application/contact-list-screen.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+	<img class="image-container" alt="" src="images/application/contact-list-screen2.png" height = "400" width = "200">
+			<li>All contacts are in contact list screen.</li>
+			<li>To make any contact favourite, click on the favourite icon available in the contact card or select the "Add to Favourite" option in option menu from the contact card.</li>
+			<li>Similarly,To make any contact unfavourite, click on the favourite icon available in the contact card or select the "Remove from Favourite" option in option menu from the contact card.</li>
+			<li>To view full contact details, click on the contact card or select "View" option in option menu in the contact card.</li>
+			<li>Similarly, To edit any contact details, click on "Edit" option in option menu in the contact card.</li>
+			<li>User can add notes for contact. To add notes, click on "Add Note" option in the option menu in the contact card.</li>
+			<li>User can delete contacts. To delete, click on "Delete" option in the option menu in the contact card.</li>
+			<li>User can also download csv file of their contacts. Click on "Download" option available right side in the app bar.</li>
+			<li>If user want to add contact manulaly, Click on the menu button available in bottom right side in the contact screen then select the "Add Contact" opotion.</li>
+			<li>User can scan directly from here by clicking the "Scan QR" in option.</li></p> 
+	
+			 <p><section id = "contact_detail_view"> <h4><strong>F). Contact Detail</strong></h4>  
 			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
-			<img class="image-container" alt="" src="images/application/assigntrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/assigntrainerdetails.png" height = "400" width = "200">
-			<li>Click on the option menu to assign trainer package as per the above image.</li>
-			<li>A form will appear where you can assign trainer package.</li>
-			<li>Select the trainer and click on the "ASSIGN TO TRAINER" button to assign the trainer package. .</li>
-			<br>
+			<li>Select the "Contact List" option from the menu to open the Contact List screen then select any of the contact in the list to check the contact details.</li>
+	<img class="image-container" alt="" src="images/application/contact-detail.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
+	<img class="image-container" alt="" src="images/application/add-notes.png" height = "400" width = "200">
+			<li>Contact Details can be edit or delete by options available in app bar.</li>
+			<li>User can reach out to their contact through whatsapp, call, email or message options available in the contact detail screen.</li>
+			<li>User can add notes for their refernces by clicking add icon in bottom of contact detail screen.</li>
+			<li>User can edit or delete notes by selecting their option available in right side of note.</li>
+			<li>The QR Code available in the top of the contact detail screen is the contact person QR.</li>
+			<li>User can redirect to contact person website if the url is mentioned in contact details.</li>
+			<li>User can add images in notes and for notes speech to text feature is available for it</li>
 			
-			<h5 id = "manual_invoice">v). Manual Invoice</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Manual Invoice" option from the menu to open the manual invoice Screen.</li>
-			<img class="image-container" alt="" src="images/application/manual_invoice_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_manual_invoice.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Here Click on "+" to add your manual invoice like Protein powder sold</li>
-			<li>Here you can see your all manual invoice</li>
-			<br>
-			
-			<section id = "trainer_view"> <h4><strong>C). Trainer</strong></h4>
-			<strong> Login Trainer ID And Password For Demo</strong><p> <strong>Email :</strong>trainer@gmail.com<br><strong>Password :</strong>trainer</p>
-		<img class="image-container" alt="" src="images/application/trainer-dashbord.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/trainer-drawer.png" height = "400" width = "200">
-		
-			</section>
-			<br>
-			
-			<h5 id = "add-member">i). Add Member in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Member" option from the menu to open the Member Screen.</li>
-			<img class="image-container" alt="" src="images/application/addmember.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addmemberdetails.png" height = "400" width = "200">
-			<li>On the top right side of the member screen, click on the add user icon to add the member.</li>
-			<li>A form will appear where you can add the member.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "SAVE" button to save the member.</li>
-			<br>
-			
-			<h5 id = "assign-membership">ii). Assign Membership in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/assign membership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/assign membership details.png" height = "400" width = "200">
-			<li>Click on the option menu to assign trainer package as per the above image.</li>
-			<li>Select the member and click on the "ASSIGN TO MEMBER" button to assign the Membership.</li>
-			<br>
-			
-			<h5 id = "add-membership">iii). Add Membership Plan in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/addmembership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addmembershipdetails.png" height = "400" width = "200">
-			<li>On the top right side of the Membership Plan screen, click on the plus icon to add Membership Plan.</li>
-			<li>A form will appear where you can add the membership.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "ADD MEMBERSHIP" button to save the membership.</li>
-			<br>
-			
-			<h5 id = "add-workout-category">iv). Add Workout Category in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Workout Category" option from the menu to open the Workout Category Screen.</li>
-			<img class="image-container" alt="" src="images/application/workoutcategory.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/workoutcategorydetails.png" height = "400" width = "200">
-			<li>On the top right side of the Workout Category screen, click on the plus icon to add Workout Category.</li>
-			<li>A form will appear where you can add the Workout Category.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "ADD CATEGORY" button to add the Workout Category.</li>
-			<br>
-			
-			<h5 id = "add-exercise">v). Add Exercise in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Exercise" option from the menu to open the Exercise Screen.</li>
-			<img class="image-container" alt="" src="images/application/addexercise.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addexercisedetails.png" height = "400" width = "200">
-			<li>On the top right side of the Exercise screen, click on the plus icon to add Exercise.</li>
-			<li>A form will appear where you can add the Exercise.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "SAVE" button to add the Exercise.</li>
-			<br>
-			
-			<h5 id = "add-nutrition">vi). Add Nutrition in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Nutrition Plan" option from the menu to open the Nutrition Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/nutrition_plan.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_nutrition.png" height = "400" width = "200">
-			<li>On the top right side of the Nutrition screen, click on the plus icon to add Nutrition plan.</li>
-			<li>A form will appear where you can add the Nutrition Plan.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "Add Nutrition" button to add the Nutrition.</li>
-			<br>
-			
-				<h5 id = "add-workout">vii). Add Workout in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Workout" option from the menu to open the Workout Screen.</li>
-			<img class="image-container" alt="" src="images/application/addworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addworkoutdetails.png" height = "400" width = "200">
-			<li>On the top right side of the Membership Plan screen, click on the "CREATE WORKOUT" to add Workout.</li>
-			<li>A form will appear where you can add the Workout.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "SAVE" button to save the Workout.</li>
-			<br>
-			
-				<h5 id = "add-class-schedule">viii). Add Class Schedule in Trainer</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
-			<img class="image-container" alt="" src="images/application/classschedule.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/classscheduledetails.png" height = "400" width = "200">
-			<li>On the top right side of the Class Schedule screen, click on the plus icon to add Class Schedule.</li>
-			<li>A form will appear where you can add the Class Schedule.</li>
-			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "CREATE CLASS" button to add the Class.</li>
-			<br>
-			
-			<h5 id = "member_membership_package">ix). Membership Package</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Membership Package" option from the menu to open the membership package Screen.</li>
-			<img class="image-container" alt="" src="images/application/membership_package_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/membership_package_update.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Here you will see all the packages of your admin</li>
-			<li>Click on the "update" button and then Click "Yes" and you can buy packages</li>
-			<br>
-			
-			<h5 id = "manual_invoice">x). Manual Invoice</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Manual Invoice" option from the menu to open the manual invoice Screen.</li>
-			<img class="image-container" alt="" src="images/application/manual_invoice_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_manual_invoice.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Here Click on "+" to add your manual invoice like Protein powder sold</li>
-			<li>Here you can see your all manual invoice</li>
-			<br>
-			
-			<section id = "member_view"> <h4><strong>D). Member</strong></h4>
-			<strong> Login Membre ID And Password For Demo</strong><p> <strong>Email :</strong>member@gmail.com<br><strong>Password :</strong>member</p>
-		<img class="image-container" alt="" src="images/application/membe-dashbord.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/member-drawer.png" height = "400" width = "200">
-		</section>
-		<br>
-		
-		<h5 id = "add-measurement">i). Add Measurement of Member</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Measurement" option from the menu to open the Measurement Screen.</li>
-			<img class="image-container" alt="" src="images/application/measurement.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Select the date, input the desired details in the respective fields. </li>
-			<li>After filling the information, click on the "SAVE" button to add the Measurement.</li>
-			<br>
-			
-			<h5 id = "start-workout">ii). Workout of Member</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "My Workout" option from the menu to open the My Workout Screen.</li>
-			<img class="image-container" alt="" src="images/application/myworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/myworkoutdetails.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/startworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Select any workout.</li>
-			<li>Select the date, start any sub category of particular workout.</li>
-			<li>Change the set, reps, sec and rest accordingly and save it.</li>
-			<li>Click on the "START" button for video refrence of that particular workout type.</li>
-			<br>
-			
-			<h5 id = "view_nutrition">iii). View Nutrition in Member</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Nutrition Plan" option from the menu to open the Nutrition Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/memberside_nutrition.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/view_nutrition.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Click on the "Nutriton" to see the details of it.</li>
-			<br>
-			
-			<h5 id = "join-class">iv). Join Class in Member</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
-			<img class="image-container" alt="" src="images/application/attain class.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/attain.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Click on the "JOIN" button.</li>
-			<li>Click on the "JOIN VIRTUAL CLASS" button to attain the class.</li>
-			<li>In the case of 'in person meeting', there will be "View" button instead of "Join".</li>
-			<li>Click on the "View" button to see the details of it.</li>
-			<br>
-			
-			
-			<h5 id = "member_membership_package">iv). Membership Package</h5>
-			<li>Open the app and navigate to the Drawer Menu.</li>
-			<li>Select the "Membership Package" option from the menu to open the membership package Screen.</li>
-			<img class="image-container" alt="" src="images/application/membership_package_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/membership_package_update.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<li>Here you will see all the membership plans of your trainer</li>
-			<li>Click on the "update" button and then Click "Yes" and you can buy Membership</li>
-			<br>
-			
-			<section id = "gust_view"> <h4><strong>E). Guest</strong></h4>
-			<strong> Login Guest ID And Password For Demo</strong><p> <strong>Email :</strong>guest@gmail.com<br><strong>Password :</strong>guest@123</p>
-		</section>
-		<br>
-		
-		<h5 id = "book_demo_class">i). Book Demo Class</h5>
-		<li>Open the app and navigate to the drawer menu</li>
-		<li>Select the "Class Schedule" option from the menu to open the class schedule Screen.</li>
-		<img class="image-container" alt="" src="images/application/guest_drawer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/guest_class_list.png" height = "400" width = "200">
-		<li>Here you will see the guest classes of different trainers and you can book any one of them for a class demo</li>
-		<li>After booking the class you can join your booked class from here</li>
-		
-		<h5 id = "guest_membership_plan">ii). Membership Plan</h5>
-		<li>Open the app and navigate to the drawer menu</li>
-		<li>Select the "Membership Plan" option from the menu to open the membership plan Screen.</li>
-		<img class="image-container" alt="" src="images/application/guest_membership_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/guest_membership_buy.png" height = "400" width = "200">
-		<li>Here you will see the guest membership plan of different trainers and You can go ahead with that trainer by purchasing a membership</li>
-		<li>After completing the membership you will be converted from a guest to a member and will be able to avail member benefits.</li>
-		
-		
-			
-			<section id="stripe_integration">
-			<h3><strong>10).<u>Stripe Payment GateWay Set up</u></strong></h3>
-			<li>If you don't already have a Stripe account, visit the Stripe website <strong><a href="https://stripe.com/" target="_blank">(https://stripe.com/)</a></strong> and you can sign up with Google or create a new account.</li>
-			<img src="images/application/secretkey.png" height = "200" width = "800">
-			<li>Just open Stripe Dashboard And  
- Click on keys to   Copy  and then Replace Your Keys in Mobile Screen </li>
- <img class="image-container" alt="" src="images/application/stripe_setting.png" height = "400" width = "200">
-			<li>Replace your "Secret Key" and "Publishable key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
-			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
-			<p><strong>1).</strong> Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
-			<strong>2).</strong> Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
-			<strong>3).</strong> Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
-			<strong>4).</strong> Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
-			<strong>5).</strong> Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
-			<strong>6).</strong> Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
-			<strong>7).</strong> Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
-			</p>
-			<br>
+			<section id = "faq">
+			<p> <h3> <strong>9).<u>FAQ</u></strong></h3>
+			<li>Open the app and navigate to the Drawer Menu or click on "Get Started!" button in Dashboard Screen.</li>
+			<li>Select the "FAQ" option from the menu to open the FAQ screen.</li>
+			<img class="image-container" alt="" src="images/application/faq-screen.png" height = "400" width = "200">
+			<li>All questions are mentioned in that screen. Users can also search their queries in search box.</li>
+			<li>Click on the add icon to get the answers of the questions.</li></p> 
 			</section>
 			
-			<section id="paypal-integration">
-			<h3><strong>11).<u>PayPal Payment GateWay Set up</u></strong></h3>
-			<li>If you don't already have a PayPal account, visit the PayPal website <strong><a href="https://www.paypal.com/" target="_blank">(https://www.paypal.com/)</a></strong> and you can sign up with Google or create a new account.</li>
-			<img src="images/application/paypalKey.png" height = "200" width = "800">
-			<li>Just open PayPal Dashboard And  
-			Click on "API credentials" then Copy Client Id and Secret key then Replace Your Keys in Mobile Screen </li>
-			<img class="image-container" alt="" src="images/application/paypal.png" height = "400" width = "200">
-			<li>Replace your "Client Id" and "Secret key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
-			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
-			<p>
-			<strong>1).</strong> Click on top-right side "Live".<br>
-			<strong>2).</strong> Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
-			<strong>3).</strong> Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
-			<strong>4).</strong> Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
-			<strong>5).</strong> Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
-			<strong>6).</strong> Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
-			<strong>7).</strong> Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
-			<strong>8).</strong> Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
-			<strong>9).</strong> Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
-			<strong>10).</strong> Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
-			<strong>11).</strong> Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
-			</section>
-			
-			<section id = "in-app-purchase-integration">
-			<h3><strong> 13).<u>In App Purchase</u></strong></h3>
-			<img class="image-container" alt="" src="images/application/in_app_purchase.png" height = "400" width = "200">
-			<li>Go to Setting Screen And Click on Payment Setting screen and Choose In App Purchase option</li>
-			<p><strong>1).</strong>If you don't have one already, sign up for a Google Play Developer account. You will need to pay a one-time registration fee.</br>
-			<strong>2).</strong>Link your Google Play Developer account to a Google Wallet Merchant account. This is where you'll receive payments from users. Provide your banking and tax information.</br>
-			<strong>3).</strong>Ensure your app is ready to support in-app purchases.</br>
-			<strong>4).</strong>In the Google Play Developer Console, navigate to your app's page, go to "Monetize" > "In-app products," and click the "Create" button to add new in-app products. You can create either managed products (consumable or non-consumable) or subscriptions.For each product, provide details like the product ID, pricing, and localized descriptions.</br>
-			<strong>5).</strong>For each in-app product, configure its details, including pricing, availability, and any promotional information. You can also create different price points for different regions.</br>
-			<strong>6).</strong>Before releasing your app, it's crucial to test your in-app purchases. Use test accounts provided by Google Play to simulate purchases without actual charges. Ensure that your app handles purchases and consumption correctly.</br>
-			<strong>7).</strong>Once you've thoroughly tested your in-app purchases and your app is ready for release, submit it to the Google Play Store. Ensure that your app's store listing provides clear and accurate information about in-app purchases.</br>
-			<strong>8).</strong>After your app is live, promote your in-app purchases within your app and on the app's store listing to encourage users to make purchases.</br>
-			<strong>9).</strong>Continuously monitor the performance of your in-app purchases, including conversion rates, revenue, and user feedback. Use this data to make improvements and optimize your in-app purchase strategy.</p>
-			</section>
-			
-			<section id = "faq"> 
-			<h3> <strong>12).<u>FAQ</u></strong></h3>
-			<P>1). How to Edit Email or Password for Admin ? <br>
-			Ans. if you don't know how Edit Email or Password please follow this steps.<a href="#edit-admin-email-or-password">(click here)</a></p>
-			
-			<P>2). How to add trainer ? <br>
-			Ans. if you don't know how to add trainer please follow this steps.<a href="#add-trainer">(click here)</a></p>
-			
-			<P>3). How to add trainer packages? <br>
-			Ans. if you don't know how to add trainer pakages please follow this steps.<a href="#trainer-packages">(click here)</a></p>
-			
-			<P>4). How to assign trainer packages? <br>
-			Ans. if you don't know how to assign trainer packages please follow this steps.<a href="#assign-trainer-packages">(click here)</a></p>
-			
-			<P>5). How to add member ? <br>
-			Ans. if you don't know how to add Member please follow this steps.<a href="#add-member">(click here)</a></p>
-			
-			<P>6). How to add membership ? <br>
-			Ans. if you don't know how to add membership please follow this steps.<a href="#add-membership">(click here)</a></p>
-			
-			<P>7). How to assign membership ? <br>
-			Ans. if you don't know how to assign membership please follow this steps.<a href="#assign-membership">(click here)</a></p>
-			
-			<P>8). How to add workout ? <br>
-			Ans. if you don't know how to add workout please follow this steps.<a href="#add-workout">(click here)</a></p>
-			
-			<P>9). How to add workout category ? <br>
-			Ans. if you don't know how to add workout category please follow this steps.<a href="#add-workout-category">(click here)</a></p>
-			
-			<P>10). How to add exercise ? <br>
-			Ans. if you don't know how to add exercise please follow this steps.<a href="#add-exercise">(click here)</a></p>
-			
-			<P>11). How to add class schedule ? <br>
-			Ans. if you don't know how to add class schedule follow this steps.<a href="#add-class-schedule">(click here)</a></p>
-			
-			<P>12). How to add measurement ? <br>
-			Ans. if you don't know how to add measurement please follow this steps.<a href="#add-measurement">(click here)</a></p>
-			
-			<P>13). How to start workout ? <br>
-			Ans. if you don't know how to start workout please follow this steps.<a href="#start-workout">(click here)</a></p>
-			
-			<P>14). How to join class ? <br>
-			Ans. if you don't know how to join class please follow this steps.<a href="#join-class">(click here)</a></p>
-			
-			<P>15). How to add Nutrition plan ? <br>
-			Ans. if you don't know how to add nutrition plan please follow this steps.<a href="#add-nutrition">(click here)</a></p>
-			
-			<P>16). How to View Nutrition plan ? <br>
-			Ans. if you don't know how to add nutrition plan please follow this steps.<a href="#view_nutrition">(click here)</a></p>
+				<section id = "logout">
+			<p> <h3> <strong>10).<u>Logout</u></strong></h3>
+			<li>Open the app and navigate to the Drawer Menu or click on "Logout" button in Dashboard Screen.</li>
+			<img class="image-container" alt="" src="images/application/admin-drawer.png" height = "400" width = "200">
+			<img class="image-container" alt="" src="images/application/logout.png" height = "400" width = "200">
+		
+			<li>Select "Yes" option for logout.</li></p> 
 			</section>
 			
 
