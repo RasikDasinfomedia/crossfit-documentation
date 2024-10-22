@@ -182,19 +182,12 @@ rel="stylesheet" type="text/css">
 				   </p>
 	
 				   <p><strong>Step 2: Connect your app to Firebase</strong>
-				   <p><u>For Android :</u></P>
-				   <li>In the Firebase console, go to your project.</li>
-				   <li>Click on the "Add app" button to add your Flutter app.</li>
-				   <li>Follow the instructions to register your app, providing the app package name (usually "com.example.your_app") and app nickname.</li>
-				   <li>Download the <strong>google-services.json</strong> file and place it in the <strong>android/app</strong> directory of your Flutter project.</li>
-				   <br>
-				   <p><u>For IOS :</u></P>
-				   <li>In the Firebase Console, go to your project settings (the gear icon) and click on "Project settings."</li>
-				   <li>Under the "Your apps" section, click on the iOS icon to add an iOS app.</li>
-				   <li>Enter your iOS bundle identifier. This can be found in your Flutter project's <strong>Info.plist</strong> file under the <strong>CFBundleIdentifier</strong> key.</li>
-				   <li>Download the <strong>GoogleService-Info.plist</strong> file and place it in the <strong>ios/Runner</strong> directory of your Flutter project.</li>
-				   </p>
-				   
+				   <p><u>For Web:</u></P>
+
+<li>In the Firebase Console, go to your project settings (the gear icon) and click on "Project settings."</li>
+<li>Under the "Your apps" section, click on the Web icon to add an Web app.</li>
+<li>Follow the instructions to register your web, providing the web app nickname.</li>
+<li>Copy the Firebase SDK configuration that is generated for you. This will include your apiKey, authDomain, and other details that you will use to configure your Flutter web app later.</li>
 				   <p><strong>Step 3: Enable Sign-in-Method</strong>
 				   <li>Click on "Authentication" from the left sidebar.</li>
 				   <li>Click on the "Sign-in method" tab.</li>
@@ -567,55 +560,35 @@ rel="stylesheet" type="text/css">
 		</section>
 		
 		<section id="relece_build">
-			<h3><strong>8).<u>Sign your release build</u></strong></h3>
-			<p>To sign a release build for CrossFit, you can follow these steps:
-			<br>
-			<strong>Step 1: Generate a keystore file</strong>
-			<li>Right-click on the "android" directory and select "Flutter" -> "Open Android module in Android Studio"</li>
-			<li>In the Generate Signed Bundle or APK dialog, select Android App Bundle or APK and click Next.</li>
-			<li>Below the field for Key store path, click Create new.</li>
-			<li>On the New Key Store window, provide the following information for your keystore and key, as shown in figure 2.<br>
-			<img alt="" src="images/application/key-store.png" height = "400" width = "400"></li>
-			<p>•  Keystore
-			<li><strong>Key store path:</strong> Select the location where your keystore should be created. Also, a file name should be added to the end of the location path with the .jks extension.</li></p>
-			<li><strong>Password:</strong> Create and confirm a secure password for your keystore.</li>
-		</p>
-		 <p>•  Key
-		<li><strong>Alias:</strong> Enter an identifying name for your key.</li>
-		<li><strong>Password:</strong> Create and confirm a secure password for your key. This should be the same as your keystore password.</li>
-		<li><strong>Validity (yeas):</strong> Set the length of time in years that your key will be valid. Your key should be valid for at least 25 years, so you can sign app updates with the same key through the lifespan of your app.</li>
-		<li>Certificate: Enter some information about yourself for your certificate. This information is not displayed in your app, but is included in your certificate as part of the APK.</li>
-		</p>
-		<li>Once you complete the form, click <strong>OK</strong>.</li>
-		<img alt="" src="images/application/crossFit-jks.png" height = "400" width = "750"></li>
-		<li>Now Replace <strong>crossfit.jks</strong> File and Open <strong>key.properties</strong> File And Change your <strong>.jks</strong> file Detail Like (storePassword, keyPassword, keyAlias, storeFile)</li>
-		<li>Now you can follow these steps and Generate Your Release Apk</li>
-		<img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
-		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build APK".<br>
-		<strong>gym_trainer_app\build\app\outputs\apk\release</strong>This space will appear after the build is complete.</p>
-	</section>	
+			<h3><strong>8).<u>Build Your Release Web App</u></strong></h3>
+<li>Now you can follow these steps and Generate Your Release Apk</li>
+<img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
+		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build WEB".<br>
+		<strong>gym_trainer_app\build\web\</strong>This space will appear after the build is complete.</p>
+</section>
+
 	
 		
 		<section id="app_pages">
-			<h3><strong>9).<u>CrossFit App Overview</u></strong></h3>
+			<h3><strong>9).<u>CrossFit Web App Overview</u></strong></h3>
 			</section>
 			<section id="fronted-login">
 			
 			<h4><strong>A). Login Screen:</strong></h4>
 			  <p> You will see this login screen.You can now login as admin username and password.</p>         
 			   
-				<img class="image-container" alt="" src="images/application/login_main.png" height = "400" width = "200">           
+				<img alt="" src="images/application/login_main.png" height = "400" width = "500">           
 			   <p>All users can login from this login screen. </p>	 	
 		</section>
 	
 <section id = "admin_view"> <h4><strong>B). Admin</strong></h4>
-<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin123</p>
-	<img class="image-container" alt="" src="images/application/admin-view.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-	<img class="image-container" alt="" src="images/application/admin-drawer.png" height = "400" width = "200">
+<strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin@123</p>
+	<img  alt="" src="images/application/admin-view.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;
+
 	<h5 id = "edit-admin-email-or-password">i). Change Admin Email And Password</h5>
 	<li>Open the app and navigate to the Drawer Menu.</li>
 	<li>Select the "Profile" option from the menu to open the profile screen.</li>
-	<img class="image-container" alt="" src="images/application/change-password.png" height = "400" width = "200">
+	<img  alt="" src="images/application/change-password.png" height = "400" width = "500">
 	<li>On the top right side of the profile screen, click on the pencil icon.</li>
 	<li>A form will appear where you can enter the new email and password.</li>
 	<li>Input the desired new email and password in the respective fields.</li>
@@ -625,8 +598,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-trainer" > ii). Add Trainer in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer" option from the menu to open the trainer screen.</li>
-			<img class="image-container" alt="" src="images/application/addtrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addtrainerdetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addtrainer.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/addtrainerdetails.png" height = "400" width = "500">
 			<li>On the top right side of the trainer screen, click on the add user icon to add trainer.</li>
 			<li>A form will appear where you can add the trainer.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -636,8 +609,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "trainer-packages">iii). Add Trainer Package in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
-			<img class="image-container" alt="" src="images/application/addtrainerpackage.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addtrainerpackagedetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addtrainerpackage.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/addtrainerpackagedetails.png" height = "400" width = "500">
 			<li>On the top right side of the trainer package screen, click on the plus icon to add the trainer package.</li>
 			<li>A form will appear where you can add trainer package.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -647,8 +620,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "assign-trainer-packages">iv). Assign Trainer Package in Admin</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Trainer Package" option from the menu to open the trainer package screen.</li>
-			<img class="image-container" alt="" src="images/application/assigntrainer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/assigntrainerdetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/assigntrainer.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/assigntrainerdetails.png" height = "400" width = "500">
 			<li>Click on the option menu to assign trainer package as per the above image.</li>
 			<li>A form will appear where you can assign trainer package.</li>
 			<li>Select the trainer and click on the "ASSIGN TO TRAINER" button to assign the trainer package. .</li>
@@ -657,16 +630,15 @@ rel="stylesheet" type="text/css">
 			<h5 id = "manual_invoice">v). Manual Invoice</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Manual Invoice" option from the menu to open the manual invoice Screen.</li>
-			<img class="image-container" alt="" src="images/application/manual_invoice_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_manual_invoice.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/manual_invoice_list.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/add_manual_invoice.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Here Click on "+" to add your manual invoice like Protein powder sold</li>
 			<li>Here you can see your all manual invoice</li>
 			<br>
 			
 			<section id = "trainer_view"> <h4><strong>C). Trainer</strong></h4>
 			<strong> Login Trainer ID And Password For Demo</strong><p> <strong>Email :</strong>trainer@gmail.com<br><strong>Password :</strong>trainer</p>
-		<img class="image-container" alt="" src="images/application/trainer-dashbord.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/trainer-drawer.png" height = "400" width = "200">
+		<img  alt="" src="images/application/trainer-dashbord.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;
 		
 			</section>
 			<br>
@@ -674,8 +646,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-member">i). Add Member in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Member" option from the menu to open the Member Screen.</li>
-			<img class="image-container" alt="" src="images/application/addmember.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addmemberdetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addmember.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/addmemberdetails.png" height = "400" width = "500">
 			<li>On the top right side of the member screen, click on the add user icon to add the member.</li>
 			<li>A form will appear where you can add the member.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -685,8 +657,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "assign-membership">ii). Assign Membership in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/assign membership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/assign membership details.png" height = "400" width = "200">
+			<img  alt="" src="images/application/assign membership details.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/assign membership.png" height = "400" width = "500">
 			<li>Click on the option menu to assign trainer package as per the above image.</li>
 			<li>Select the member and click on the "ASSIGN TO MEMBER" button to assign the Membership.</li>
 			<br>
@@ -694,8 +666,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-membership">iii). Add Membership Plan in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Plan" option from the menu to open the Membership Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/addmembership.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addmembershipdetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addmembership.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/addmembershipdetails.png" height = "400" width = "500">
 			<li>On the top right side of the Membership Plan screen, click on the plus icon to add Membership Plan.</li>
 			<li>A form will appear where you can add the membership.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -705,8 +677,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-workout-category">iv). Add Workout Category in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Workout Category" option from the menu to open the Workout Category Screen.</li>
-			<img class="image-container" alt="" src="images/application/workoutcategory.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/workoutcategorydetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/workoutcategory.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/workoutcategorydetails.png" height = "400" width = "500">
 			<li>On the top right side of the Workout Category screen, click on the plus icon to add Workout Category.</li>
 			<li>A form will appear where you can add the Workout Category.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -716,8 +688,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-exercise">v). Add Exercise in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Exercise" option from the menu to open the Exercise Screen.</li>
-			<img class="image-container" alt="" src="images/application/addexercise.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addexercisedetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addexercise.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/addexercisedetails.png" height = "400" width = "500">
 			<li>On the top right side of the Exercise screen, click on the plus icon to add Exercise.</li>
 			<li>A form will appear where you can add the Exercise.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -727,8 +699,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "add-nutrition">vi). Add Nutrition in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Nutrition Plan" option from the menu to open the Nutrition Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/nutrition_plan.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_nutrition.png" height = "400" width = "200">
+			<img  alt="" src="images/application/nutrition_plan.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/add_nutrition.png" height = "400" width = "500">
 			<li>On the top right side of the Nutrition screen, click on the plus icon to add Nutrition plan.</li>
 			<li>A form will appear where you can add the Nutrition Plan.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -738,19 +710,19 @@ rel="stylesheet" type="text/css">
 				<h5 id = "add-workout">vii). Add Workout in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Workout" option from the menu to open the Workout Screen.</li>
-			<img class="image-container" alt="" src="images/application/addworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/addworkoutdetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/addworkout.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="" src="images/application/addworkoutdetails.png" height = "400" width = "500">
 			<li>On the top right side of the Membership Plan screen, click on the "CREATE WORKOUT" to add Workout.</li>
 			<li>A form will appear where you can add the Workout.</li>
 			<li>Input the desired details in the respective fields.</li>
-			<li>After filling the information, click on the "SAVE" button to save the Workout.</li>
+			<li>After filling the information, click on the "ADD WORKOUT" button to save the Workout.</li>
 			<br>
 			
 				<h5 id = "add-class-schedule">viii). Add Class Schedule in Trainer</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
-			<img class="image-container" alt="" src="images/application/classschedule.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/classscheduledetails.png" height = "400" width = "200">
+			<img  alt="" src="images/application/classschedule.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/classscheduledetails.png" height = "400" width = "500">
 			<li>On the top right side of the Class Schedule screen, click on the plus icon to add Class Schedule.</li>
 			<li>A form will appear where you can add the Class Schedule.</li>
 			<li>Input the desired details in the respective fields.</li>
@@ -760,8 +732,8 @@ rel="stylesheet" type="text/css">
 			<h5 id = "member_membership_package">ix). Membership Package</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Package" option from the menu to open the membership package Screen.</li>
-			<img class="image-container" alt="" src="images/application/membership_package_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/membership_package_update.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/membership_package_list.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/membership_package_update.png" height = "400"width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Here you will see all the packages of your admin</li>
 			<li>Click on the "update" button and then Click "Yes" and you can buy packages</li>
 			<br>
@@ -769,23 +741,23 @@ rel="stylesheet" type="text/css">
 			<h5 id = "manual_invoice">x). Manual Invoice</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Manual Invoice" option from the menu to open the manual invoice Screen.</li>
-			<img class="image-container" alt="" src="images/application/manual_invoice_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/add_manual_invoice.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/manual_invoice_list.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/add_manual_invoice.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Here Click on "+" to add your manual invoice like Protein powder sold</li>
 			<li>Here you can see your all manual invoice</li>
 			<br>
 			
 			<section id = "member_view"> <h4><strong>D). Member</strong></h4>
 			<strong> Login Membre ID And Password For Demo</strong><p> <strong>Email :</strong>member@gmail.com<br><strong>Password :</strong>member</p>
-		<img class="image-container" alt="" src="images/application/membe-dashbord.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/member-drawer.png" height = "400" width = "200">
+		<img  alt="" src="images/application/membe-dashbord.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;
+
 		</section>
 		<br>
 		
 		<h5 id = "add-measurement">i). Add Measurement of Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Measurement" option from the menu to open the Measurement Screen.</li>
-			<img class="image-container" alt="" src="images/application/measurement.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/measurement.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Select the date, input the desired details in the respective fields. </li>
 			<li>After filling the information, click on the "SAVE" button to add the Measurement.</li>
 			<br>
@@ -793,9 +765,9 @@ rel="stylesheet" type="text/css">
 			<h5 id = "start-workout">ii). Workout of Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "My Workout" option from the menu to open the My Workout Screen.</li>
-			<img class="image-container" alt="" src="images/application/myworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/myworkoutdetails.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/startworkout.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="" src="images/application/myworkout.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/myworkoutdetails.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/startworkout.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Select any workout.</li>
 			<li>Select the date, start any sub category of particular workout.</li>
 			<li>Change the set, reps, sec and rest accordingly and save it.</li>
@@ -805,16 +777,16 @@ rel="stylesheet" type="text/css">
 			<h5 id = "view_nutrition">iii). View Nutrition in Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Nutrition Plan" option from the menu to open the Nutrition Plan Screen.</li>
-			<img class="image-container" alt="" src="images/application/memberside_nutrition.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/view_nutrition.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/memberside_nutrition.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img alt="" src="images/application/view_nutrition.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Click on the "Nutriton" to see the details of it.</li>
 			<br>
 			
 			<h5 id = "join-class">iv). Join Class in Member</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Class Schedule" option from the menu to open the Class Schedule Screen.</li>
-			<img class="image-container" alt="" src="images/application/attain class.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/attain.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/attain class.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/attain.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Click on the "JOIN" button.</li>
 			<li>Click on the "JOIN VIRTUAL CLASS" button to attain the class.</li>
 			<li>In the case of 'in person meeting', there will be "View" button instead of "Join".</li>
@@ -825,31 +797,31 @@ rel="stylesheet" type="text/css">
 			<h5 id = "member_membership_package">iv). Membership Package</h5>
 			<li>Open the app and navigate to the Drawer Menu.</li>
 			<li>Select the "Membership Package" option from the menu to open the membership package Screen.</li>
-			<img class="image-container" alt="" src="images/application/membership_package_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
-			<img class="image-container" alt="" src="images/application/membership_package_update.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/membership_package_list.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
+			<img  alt="" src="images/application/membership_package_update.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Here you will see all the membership plans of your trainer</li>
 			<li>Click on the "update" button and then Click "Yes" and you can buy Membership</li>
 			<br>
 			
 			<section id = "gust_view"> <h4><strong>E). Guest</strong></h4></section><br>
 			<h4><strong>Login Screen:</strong></h4>
-			<img class="image-container" alt="" src="images/application/login_screen_for_guest.png" height = "400" width = "200">
+			<img  alt="" src="images/application/login_screen_for_guest.png" height = "400" width = "500">
 		<li>Click on the "Book Demo Class" button and then you will be taken to the register screen where you can register as a guest by filling in all the details.</li>
 		<li>after register complete you can login again and with the same id and password</li>
 		<li>after login you can book your demo Class</li>
 		<h5 id = "book_demo_class">i). Book Demo Class</h5>
 		<li>Open the app and navigate to the drawer menu</li>
 		<li>Select the "Class Schedule" option from the menu to open the class schedule Screen.</li>
-		<img class="image-container" alt="" src="images/application/guest_drawer.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/guest_class_list.png" height = "400" width = "200">
+		<img  alt="" src="images/application/guest_dashbord.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;
+
 		<li>Here you will see the guest classes of different trainers and you can book any one of them for a class demo</li>
 		<li>After booking the class you can join your booked class from here</li>
 		
 		<h5 id = "guest_membership_plan">ii). Membership Plan</h5>
 		<li>Open the app and navigate to the drawer menu</li>
 		<li>Select the "Membership Plan" option from the menu to open the membership plan Screen.</li>
-		<img class="image-container" alt="" src="images/application/guest_membership_list.png" height = "400" width = "200">&nbsp;&nbsp;&nbsp;
-		<img class="image-container" alt="" src="images/application/guest_membership_buy.png" height = "400" width = "200">
+		<img  alt="" src="images/application/guest_membership_list.png" height = "400" width = "500">&nbsp;&nbsp;&nbsp;
+		<img  alt="" src="images/application/guest_membership_buy.png" height = "400" width = "500">
 		<li>Here you will see the guest membership plan of different trainers and You can go ahead with that trainer by purchasing a membership</li>
 		<li>After completing the membership you will be converted from a guest to a member and will be able to avail member benefits.</li>
 		
@@ -861,7 +833,7 @@ rel="stylesheet" type="text/css">
 			<img src="images/application/secretkey.png" height = "200" width = "800">
 			<li>Just open Stripe Dashboard And  
  Click on keys to   Copy  and then Replace Your Keys in Mobile Screen </li>
- <img class="image-container" alt="" src="images/application/stripe_setting.png" height = "400" width = "200">
+ <img  alt="" src="images/application/stripe_setting.png" height = "400" width = "500">
 			<li>Replace your "Secret Key" and "Publishable key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
 			<p><strong>1).</strong> Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
@@ -881,7 +853,7 @@ rel="stylesheet" type="text/css">
 			<img src="images/application/paypalKey.png" height = "200" width = "800">
 			<li>Just open PayPal Dashboard And  
 			Click on "API credentials" then Copy Client Id and Secret key then Replace Your Keys in Mobile Screen </li>
-			<img class="image-container" alt="" src="images/application/paypal.png" height = "400" width = "200">
+			<img  alt="" src="images/application/paypal.png" height = "400" width = "500">
 			<li>Replace your "Client Id" and "Secret key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
 			<p>
@@ -900,7 +872,7 @@ rel="stylesheet" type="text/css">
 			
 			<section id = "in-app-purchase-integration">
 			<h3><strong> 13).<u>In App Purchase</u></strong></h3>
-			<img class="image-container" alt="" src="images/application/in_app_purchase.png" height = "400" width = "200">
+			<img  alt="" src="images/application/in_app_purchase.png" height = "400" width = "500">
 			<li>Go to Setting Screen And Click on Payment Setting screen and Choose In App Purchase option</li>
 			<p><strong>1).</strong>If you don't have one already, sign up for a Google Play Developer account. You will need to pay a one-time registration fee.</br>
 			<strong>2).</strong>Link your Google Play Developer account to a Google Wallet Merchant account. This is where you'll receive payments from users. Provide your banking and tax information.</br>
