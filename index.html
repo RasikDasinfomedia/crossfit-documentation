@@ -78,8 +78,8 @@ rel="stylesheet" type="text/css">
       <div id="header-sm">
         <div class="col-md-3 logo"> <a href="index.html"><img src="images/mojoomla_logo.jpg" width="150" id="img-logo" alt="logo"></a> </div>
         <div class="col-md-8 col-md-offset-1 desc">
-          <h4 class="slight">CrossFit Web</h4>
-          <h5 class="slight"><small> Documented by Mojoomla - at November 20 2024</small></h5>
+
+
         </div>
       </div>
       <div class="col-md-4">
@@ -105,8 +105,12 @@ rel="stylesheet" type="text/css">
 						</ul></li>
 			<li><a href="#stripe_integration">Stripe Payment GateWay Set up</a></li>
 			<li><a href="#paypal-integration">PayPal Payment GateWay Set up</a></li>
-			<li><a href="#in-app-purchase-integration">In App Purchase Set up</a></li>
-			<li><a href="#faq">FAQ</a></li><li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
+<li><a href="#in-app-purchase-integration">In App Purchase Set up</a></li>
+<li><a href="#faq">FAQ</a></li>
+<!--
+<li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
+-->
+
 			</ul>
 
         </aside>
@@ -116,8 +120,14 @@ rel="stylesheet" type="text/css">
           <div id="header" class="row">
             <div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo" height="110" width="100"></a> </div>
             <div class="col-md-8 col-md-offset-1 desc">
-              <h4 class="slight">CrossFit Web <sub><small></small></sub></h4>
-              <h5 class="slight"><small> Documented by Mojoomla</a> - at June 01 2023</small></h5>
+                      <h4 class="slight">CrossFit Web</h4>
+        <h5 class="slight"><small>Documented by Mojoomla - at <span id="current-date"></span></small></h5>
+<script>
+    // JavaScript to dynamically set the current date
+    const dateElement = document.getElementById('current-date');
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    dateElement.innerText = new Date().toLocaleDateString('en-US', options);
+</script>
             </div>
           </div>
 <hr class="vertical-space2">
@@ -175,14 +185,14 @@ rel="stylesheet" type="text/css">
 			</ol>
 			
 			
-			<section id = "flutter-version"><h3><strong>3).<u>Flutter Version</u></strong></h3>
+			<section id = "flutter-version"><h3><strong>3) <u>Flutter Version</u></strong></h3>
 			  <p>environment: </br>
   				sdk: '>=2.18.4 <3.0.0' </p>
 			  </section>
 			
 			<section id="set-up-firebase-project">
 				   <h3><strong>4) <u>Set Up Firebase</u></strong></h3>
-				   <p>To set up Firebase Database for a CrossFit app, follow these step-by-step instructions:</p>
+				   <p>To set up Firebase Database for a CrossFit Web, follow these step-by-step instructions:</p>
 				   <p>
 				   <strong>Step 1: Create a Firebase project</strong>
 				   <li>Go to the Firebase console <strong><a href="https://console.firebase.google.com/" target="_blank">(https://console.firebase.google.com/)</a></strong> and sign in with your Google account.</li>
@@ -482,7 +492,7 @@ rel="stylesheet" type="text/css">
 				   <li>Explore Sendinblue features: Once your account setup is complete, you can start exploring the various features and functionalities offered by Sendinblue. These may include email marketing, SMS campaigns, automation workflows, contact management, and more.</li>
 				   </p>
 	
-				   <p><strong>Step 2: Connect your app with SMTP & API</strong>
+				   <p><strong>Step 2: Connect your Website with SMTP & API</strong>
 				   <li>Go Sendinblue dashboard.</li></br>
 				   <img alt="" src="images/application/sendinblue.png"></br></br>
 				   <li>In the SMTP section, you'll find your SMTP credentials. Make a note of the SMTP server, port number, username, and password. You'll need these details to configure your email notifications.</li></br>
@@ -497,14 +507,14 @@ rel="stylesheet" type="text/css">
 		<section id = "change-app-name"> 
 
 <h3> <strong>6) <u>Change Website Name</u></strong></h3>
-        <p>Change the application name To change the name of a Flutter app, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the app name:		
+        <p>Change the website name To change the name of a Flutter web, you need to modify the appropriate files and configurations. Here's a step-by-step guide to help you change the web name:		
 		</p>
         <ol>
         <li>Open the Flutter project in your preferred integrated development environment (IDE) or code editor.</li>
-		<li>Now, you need to update the app name in the Android configuration.</li>
-		<li>Follow below steps and you can change your app name.</li>
+		<li>Now, you need to update the web name in the Android configuration.</li>
+		<li>Follow below steps and you can change your web name.</li>
 		<li>First you go your app in android folder in same path <strong>"android -> app -> src -> main -> AndroidManifest.xml" </strong></li>
-		<li>After in "AndroidMani`fest.xml" you find <strong>"label"</strong> keyword and change your app name</li>
+		<li>After in "AndroidMani`fest.xml" you find <strong>"label"</strong> keyword and change your web name</li>
 		<li>If you need change your apk name ypu can follow this below steps</li>
 		<li>First you go your app in android folder in same path <strong>"android -> app -> src -> build.gradle"</strong></li>
 		<li>After in "build.gradle" you find <strong>"setProperty"</strong> keyword and can change the app name</li>
@@ -514,15 +524,15 @@ rel="stylesheet" type="text/css">
 		<li>Inside the <strong>ios</strong> directory, find the <strong>Runner</strong> directory and open it.</li>
 		<li>Locate the <strong>Info.plist</strong> file (usually located at <strong>ios/Runner/Info.plist</strong>).</li>
 		<li>Open the <strong>Info.plist<strong> file and find the <strong><key>CFBundleDisplayName</key></strong> section.</li>
-		<li>Change the value of the <strong><string></strong> tag below <strong><key>CFBundleDisplayName</key></strong> to your desired app name. For example, <strong><string>CrossFit App</string></strong>.</li>
+		<li>Change the value of the <strong><string></strong> tag below <strong><key>CFBundleDisplayName</key></strong> to your desired app name. For example, <strong><string>CrossFit Web</string></strong>.</li>
 		<li>Save the <strong>Info.plist</strong> file.</li>
 		</ol> 
-		<p><strong>Note :</strong>After following these steps, the name of your Flutter app should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
+		<p><strong>Note :</strong>After following these steps, the name of your Flutter Web should be updated. Remember to clean and rebuild your project to ensure the changes take effect.</p>
 		</section>	  
 			  
 <section id = "change-logo">
 <h3><strong>7) <u>Change Website Logo</u></strong></h3>
-		<p>Change the launcher icon in <code>Replace the default app icons:<br>
+		<p>Change the launcher icon in <code>Replace the default web icons:<br>
 
 <strong> -> </strong>For Android, navigate to the <strong>android/app/src/main/res</strong> directory in your Flutter project. Replace the icons in the mipmap directories with your custom icons, following the size-specific folders (e.g., mipmap-mdpi, mipmap-hdpi, etc.).<br>
 <strong> -> </strong>For iOS, navigate to the <strong> ios/Runner/Assets.xcassets/AppIcon</strong> appiconset directory in your Flutter project. Replace the default icons with your custom icons. Make sure to match the size and format requirements for each icon.</code> </p>
@@ -571,22 +581,22 @@ rel="stylesheet" type="text/css">
 			<h3><strong>9) <u>Build Your Release Web</u></strong></h3>
 
 <p>To set up for a Release web app, follow these step-by-step instructions:</p>
-<p><strong>Step 1.Download and install FileZilla (if not installed)</strong></p>
+<p><strong>Step 1 Download and install FileZilla (if not installed)</strong></p>
 <li>Go to the  <strong><a href="https://filezilla-project.org/" target="_blank">FileZilla Project</a></strong>.</li>
 <li>Click on the Download FileZilla Client button on the homepage.</li>
 <li>Once the download is complete, open the installer and follow the on-screen instructions to install FileZilla.</li>
-<p><strong>Step 2.Build Your Flutter Web App</strong><p>
+<p><strong>Step 2 Build Your Flutter Web</strong><p>
 <img alt="" src="images/application/apk.png" height = "200" width = "500"></li>
 		<p>Click on "Build" → then click on "Flutter" → and finally click on "Build WEB".<br>
 		<strong>gym_trainer_app\build\web\</strong>This space will appear after the build is complete.</p>
 
-<p><strong>Step 3.Open FileZilla client</strong><p>
+<p><strong>Step 3 Open FileZilla client</strong><p>
 <li>Connect to Your Server:</li>
 	<li>In the "Quickconnect" section, enter your server credentials.</li>
 <li>Click the Quickconnect button.</li>
-<p><strong>Step 4.Navigate to the Target Directory on the Server</strong></p>
+<p><strong>Step 4 Navigate to the Target Directory on the Server</strong></p>
 <li>In the right pane (remote server), navigate to the directory where you want to upload your Flutter web app. </li>
-<p><strong>Step 5.Upload Flutter Web Build Files</strong></p>
+<p><strong>Step 5 Upload Flutter Web Build Files</strong></p>
 <ol>
 <li>Open Local Directory</li>
 <ul>
@@ -604,22 +614,22 @@ Drag and drop the selected files from the left pane to the target directory in t
 
 </section>		
 		<section id="app_pages">
-			<h3><strong>10) <u>CrossFit Web App Overview</u></strong></h3>
+			<h3><strong>10) <u>CrossFit Web Overview</u></strong></h3>
 			</section>
 			<section id="fronted-login">
 			
-			<h4><strong>A). Login Screen:</strong></h4>
+			<h4><strong>A) Login Screen:</strong></h4>
 			  <p> You will see this login screen.You can now login as admin username and password.</p>         
 			   
 	<img alt="" src="images/application/login_main.png" >           
 			   <p>All users can login from this login screen. </p>	 	
 		</section>
 	
-<section id = "admin_view"> <h4><strong>B) Admin</strong></h4>
+<section id = "admin_view"><h4><strong>B) Admin</strong></h4>
 <strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin@123</p>
 	<img  alt="" src="images/application/admin-view.png" >&nbsp;&nbsp;&nbsp;
 <br>
-	<b>i) Change Admin Email And Password</b>
+	<b id="edit_email_and_password">i) Change Admin Email And Password</b>
 	<li>Click on the "Profile" option from the menu to navigate to the profile screen.</li>
 	<img  alt="" src="images/application/change-password.png" >
 	<li>On the top right side of the profile screen, click on the pencil icon.</li>
@@ -628,7 +638,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 	<li>After making the necessary changes, click on the "Save" button to save the updated information.</li>
 		</section>
 		<br>
-			<strong id = "add-trainer" > ii). Add Trainer in Admin</strong>
+			<strong id = "add-trainer" >ii) Add Trainer in Admin</strong>
 			<li>Click on the "Trainer" option in the menu to open the trainer screen.</li>
 			<img  alt="" src="images/application/addtrainer.png",height = "400">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/addtrainerdetails.png" height = "400">
@@ -638,7 +648,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "Add Trainer" button to save the trainer.</li>
 			<br>
 				
-			<strong id = "trainer-packages">iii). Add Trainer Package in Admin</strong>
+			<strong id = "trainer-packages">iii) Add Trainer Package in Admin</strong>
 			<li>Click on the "Trainer Package" option from the menu to open the Trainer Package screen.</li>
 			<img  alt="" src="images/application/addtrainerpackage.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/addtrainerpackagedetails.png">
@@ -648,7 +658,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "Add Packages" button to save the trainer package.</li>
 			<br>
 			
-			<strong id = "assign-trainer-packages">iv). Assign Trainer Package in Admin</strong>
+			<strong id = "assign-trainer-packages">iv) Assign Trainer Package in Admin</strong>
 			<li>Click on the "Trainer Package" option from the menu to open the Trainer Package screen.</li>
 			<img  alt="" src="images/application/assigntrainer.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/assigntrainerdetails.png">
@@ -657,7 +667,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Select the trainer and click on the "ASSIGN TO TRAINER" button to assign the trainer package. .</li>
 			<br>
 			
-			<strong id = "manual_invoice">v). Manual Invoice</strong>
+			<strong id = "manual_invoice">v) Manual Invoice</strong>
 			
 			<li>Click on the "Manual Invoice" option in the menu to open the manual invoice screen.</li>
 			<img  alt="" src="images/application/manual_invoice_list.png" >&nbsp;&nbsp;&nbsp;&nbsp;
@@ -666,14 +676,14 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Here you can see your all manual invoice</li>
 			<br>
 			
-			<section id = "trainer_view"> <h4><strong>C). Trainer</strong></h4>
+			<section id = "trainer_view"> <h4><strong>C) Trainer</strong></h4>
 			<strong> Login Trainer ID And Password For Demo</strong><p> <strong>Email :</strong>trainer@gmail.com<br><strong>Password :</strong>trainer</p>
 		<img  alt="" src="images/application/trainer-dashbord.png" >&nbsp;&nbsp;&nbsp;
 		
 			</section>
 			<br>
 			
-			<strong id = "add-member">i). Add Member in Trainer</strong>
+			<strong id = "add-member">i) Add Member in Trainer</strong>
 			<li>Click on the "Member" option in the menu to open the Member screen.</li>
 			<img  alt="" src="images/application/addmember.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/addmemberdetails.png" >
@@ -683,7 +693,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "SAVE" button to save the member.</li>
 			<br>
 			
-			<strong id = "assign-membership">ii). Assign Membership in Trainer</strong>
+			<strong id = "assign-membership">ii) Assign Membership in Trainer</strong>
 			<li>Click on the "Membership Plan" option from the menu to open the Membership Plan screen.</li>
 		<img  alt="" src="images/application/assign membership.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/assign membership details.png">
@@ -691,7 +701,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Select the member and click on the "ASSIGN TO MEMBER" button to assign the Membership.</li>
 			<br>
 			
-			<strong id = "add-membership">iii). Add Membership Plan in Trainer</strong>
+			<strong id = "add-membership">iii) Add Membership Plan in Trainer</strong>
 			<li>Click on the "Membership Plan" option from the menu to open the Membership Plan screen.</li>
 			<img  alt="" src="images/application/addmembership.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/addmembershipdetails.png">
@@ -701,7 +711,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "ADD MEMBERSHIP" button to save the membership.</li>
 			<br>
 			
-			<strong id = "add-workout-category">iv). Add Workout Category in Trainer</strong>
+			<strong id = "add-workout-category">iv) Add Workout Category in Trainer</strong>
 			<li>Click on the "Workout Category" option from the menu to open the Workout Category screen.</li>
 			<img  alt="" src="images/application/workoutcategory.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/workoutcategorydetails.png" >
@@ -711,7 +721,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "ADD CATEGORY" button to add the Workout Category.</li>
 			<br>
 			
-			<strong id = "add-exercise">v). Add Exercise in Trainer</strong>
+			<strong id = "add-exercise">v) Add Exercise in Trainer</strong>
 			<li>Click on the "Exercise" option from the menu to open the Exercise screen.</li>
 			<img  alt="" src="images/application/addexercise.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/addexercisedetails.png">
@@ -721,7 +731,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "SAVE" button to add the Exercise.</li>
 			<br>
 			
-			<strong id = "add-nutrition">vi). Add Nutrition in Trainer</strong>
+			<strong id = "add-nutrition">vi) Add Nutrition in Trainer</strong>
 			<li>Click on the "Nutrition Plan" option from the menu to open the Nutrition Plan screen.</li>
 			<img  alt="" src="images/application/nutrition_plan.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/add_nutrition.png">
@@ -731,7 +741,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "Add Nutrition" button to add the Nutrition.</li>
 			<br>
 			
-				<strong id = "add-workout">vii). Add Workout in Trainer</strong>
+				<strong id = "add-workout">vii) Add Workout in Trainer</strong>
 			<li>Click on the "Workout" option from the menu to open the Workout screen.</li>
 			<img  alt="" src="images/application/addworkout.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img alt="" src="images/application/addworkoutdetails.png">
@@ -741,7 +751,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "ADD WORKOUT" button to save the Workout.</li>
 			<br>
 			
-				<strong id = "add-class-schedule">viii). Add Class Schedule in Trainer</strong>
+				<strong id = "add-class-schedule">viii) Add Class Schedule in Trainer</strong>
 			<li>Click on the "Class Schedule" option from the menu to open the Class Schedule screen.</li>
 			<img  alt="" src="images/application/classschedule.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/classscheduledetails.png" >
@@ -751,7 +761,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>After filling the information, click on the "CREATE CLASS" button to add the Class.</li>
 			<br>
 			
-			<strong id = "member_membership_package">ix). Membership Package</strong>
+			<strong id = "member_membership_package">ix) Membership Package</strong>
 			<li>Click on the "Membership Package" option from the menu to open the Membership Package screen.</li>
 			<img  alt="" src="images/application/membership_package_list.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/membership_package_update.png" >&nbsp;&nbsp;&nbsp;&nbsp;
@@ -759,7 +769,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Click on the "update" button and then Click "Yes" and you can buy packages</li>
 			<br>
 			
-			<strong id = "manual_invoice">x). Manual Invoice</strong>
+			<strong id = "manual_invoice">x) Manual Invoice</strong>
 			<li>Click on the "Manual Invoice" option from the menu to open the Manual Invoice screen.</li>
 			<img  alt="" src="images/application/manual_invoice_list.png">&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/add_manual_invoice.png" >&nbsp;&nbsp;&nbsp;&nbsp;
@@ -767,21 +777,21 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Here you can see your all manual invoice</li>
 			<br>
 			
-			<section id = "member_view"> <h4><strong>D). Member</strong></h4>
+			<section id = "member_view"> <h4><strong>D) Member</strong></h4>
 			<strong> Login Membre ID And Password For Demo</strong><p> <strong>Email :</strong>member@gmail.com<br><strong>Password :</strong>member</p>
 		<img  alt="" src="images/application/membe-dashbord.png">&nbsp;&nbsp;&nbsp;
 
 		</section>
 		<br>
 		
-		<strong id = "add-measurement">i). Add Measurement of Member</strong>
+		<strong id = "add-measurement">i) Add Measurement of Member</strong>
 			<li>Click on the "Measurement" option from the menu to open the Measurement screen.</li>
 			<img  alt="" src="images/application/measurement.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Select the date, input the desired details in the respective fields. </li>
 			<li>After filling the information, click on the "SAVE" button to add the Measurement.</li>
 			<br>
 			
-			<strong id = "start-workout">ii). Workout of Member</strong>
+			<strong id = "start-workout">ii) Workout of Member</strong>
 			<li>Click on the "My Workout" option from the menu to open the My Workout screen.</li>
 			<img alt="" src="images/application/myworkout.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/myworkoutdetails.png">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -791,14 +801,14 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Click on the "START" button for video refrence of that particular workout type.</li>
 			<br>
 			
-			<strong id = "view_nutrition">iii). View Nutrition in Member</strong>
+			<strong id = "view_nutrition">iii) View Nutrition in Member</strong>
 			<li>Click on the "Nutrition Plan" option from the menu to open the Nutrition Plan screen.</li>
 			<img  alt="" src="images/application/memberside_nutrition.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img alt="" src="images/application/view_nutrition.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<li>Click on the "Nutriton" to see the details of it.</li>
 			<br>
 			
-			<strong id = "join-class">iv). Join Class in Member</strong>
+			<strong id = "join-class">iv) Join Class in Member</strong>
 			<li>Click on the "Class Schedule" option from the menu to open the Class Schedule screen.</li>
 			<img  alt="" src="images/application/attain class.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/attain.png" >&nbsp;&nbsp;&nbsp;&nbsp;
@@ -809,7 +819,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<br>
 			
 			
-			<strong id = "member_membership_package">iv). Membership Package</strong>
+			<strong id = "member_membership_package">iv) Membership Package</strong>
 			<li>Click on the "Membership Package" option from the menu to open the Membership Package screen.</li>
 			<img  alt="" src="images/application/membership_package_list.png" >&nbsp;&nbsp;&nbsp;&nbsp;
 			<img  alt="" src="images/application/membership_package_update.png">&nbsp;&nbsp;&nbsp;&nbsp;
@@ -818,7 +828,7 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<br>
 			
 			<section id = "gust_view"> <h4><strong>E) Guest</strong></h4></section><br>
-			<h4><strong>Login Screen:</strong></h4>
+			                       <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Login Screen:</strong></h4>
 			<img  alt="" src="images/application/login_screen_for_guest.png" h>
 		<li>Click on the "Book Demo Class" button and then you will be taken to the register screen where you can register as a guest by filling in all the details.</li>
 		<li>after register complete you can login again and with the same id and password</li>
@@ -849,13 +859,13 @@ Drag and drop the selected files from the left pane to the target directory in t
  <img  alt="" src="images/application/stripe_setting.png" >
 			<li>Replace your "Secret Key" and "Publishable key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
-			<p><strong>1).</strong> Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
-			<strong>2).</strong> Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
-			<strong>3).</strong> Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
-			<strong>4).</strong> Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
-			<strong>5).</strong> Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
-			<strong>6).</strong> Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
-			<strong>7).</strong> Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
+			<p><strong>1) </strong> Create a Stripe Account: Go to the Stripe website <strong><a href="https://stripe.com/" target="_blank">(stripe.com)</a></strong> and sign up for an account. Provide the necessary information, including your business details and banking information.<br>
+			<strong>2) </strong> Verify Your Email: Once you sign up, Stripe will send you an email to verify your email address. Click on the verification link in the email to proceed.<br>
+			<strong>3) </strong> Activate Your Account: Complete the account activation process by providing any additional information required by Stripe, such as your business address and identification details. This step may vary depending on your location and business type.<br>
+			<strong>4) </strong> Set Up Payment Methods: In your Stripe dashboard, navigate to the "Payments" or "Payment Methods" section. Here, you can choose which payment methods you want to enable, such as credit cards, digital wallets (e.g., Apple Pay or Google Pay), or bank transfers. Follow the instructions provided by Stripe to configure the payment methods you desire.<br>
+			<strong>5) </strong> Test Payments: Before going live, it's crucial to test your payment setup. Stripe offers a "test mode" that allows you to simulate transactions without charging real money. This step helps ensure that your integration is functioning correctly and that you can handle payments smoothly.<br>
+			<strong>6) </strong> Enable Live Payments: Once you have tested your payment setup and are satisfied with the results, you can switch your Stripe account to live mode. In live mode, actual payments will be processed, and your customers will be charged.<br>
+			<strong>7) </strong> Monitor and Manage Payments: Use the Stripe dashboard to monitor transactions, manage refunds, view reports, and perform other payment-related tasks. Stripe provides a comprehensive set of tools and features to help you manage your payments efficiently.<br>
 			</p>
 			<br>
 			</section>
@@ -870,88 +880,86 @@ Drag and drop the selected files from the left pane to the target directory in t
 			<li>Replace your "Client Id" and "Secret key" with your actual Stripe API keys in admin setting -> Payment Setting Screen .</li>
 			<td>after completing the key replacement follow these steps and activate your account in live mode</td>
 			<p>
-			<strong>1).</strong> Click on top-right side "Live".<br>
-			<strong>2).</strong> Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
-			<strong>3).</strong> Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
-			<strong>4).</strong> Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
-			<strong>5).</strong> Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
-			<strong>6).</strong> Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
-			<strong>7).</strong> Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
-			<strong>8).</strong> Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
-			<strong>9).</strong> Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
-			<strong>10).</strong> Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
-			<strong>11).</strong> Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
+			<strong>1) </strong> Click on top-right side "Live".<br>
+			<strong>2) </strong> Follow the instructions on the screen to provide your personal details, such as your name, address, phone number, and date of birth. Make sure to enter accurate information. <br>
+			<strong>3) </strong> Review the terms and conditions: Read PayPal's terms and conditions and user agreement thoroughly. If you agree with the terms, check the box to indicate your acceptance. <br>
+			<strong>4) </strong> Verify your email address: After completing the registration form, PayPal will send a confirmation email to the address you provided during the sign-up process. Open your email inbox, locate the email from PayPal, and click on the verification link within the email to confirm your email address. <br>
+			<strong>5) </strong> Link your bank account or card: To activate your live PayPal account, you need to link it to a bank account or a credit/debit card. On the PayPal website, navigate to the "Wallet" or "Settings" section and choose the option to link a bank account or card. <br>
+			<strong>6) </strong> Enter your financial information: Provide the required details of your bank account or card, such as the account number, routing number (for bank accounts), or the card number, expiration date, and CVV (for cards). PayPal will use this information for verification purposes. <br>
+			<strong>7) </strong> Confirm your linked bank account or card: PayPal will initiate a verification process to ensure that the bank account or card you linked is valid. They may make small deposits to your bank account or charge a small amount to your card. Check your bank statement or card statement to find these transactions. <br>
+			<strong>8) </strong> Verify your bank account or card: Once you see the deposits or charges in your bank statement or card statement, log in to your PayPal account and navigate to the "Wallet" or "Settings" section. Locate the option to confirm your bank account or card and enter the exact amounts charged or deposited by PayPal. <br>
+			<strong>9) </strong> Provide additional verification (if requested): Depending on your country and specific circumstances, PayPal may require additional verification. This may include uploading documents such as a copy of your identification card, proof of address, or proof of business registration. If prompted, follow the instructions provided by PayPal to complete the verification process. <br>
+			<strong>10) </strong> Review and adjust your account settings: Once your account is fully activated, take some time to review and adjust your account settings according to your preferences. You can manage privacy settings, notification preferences, security options, and more. <br>
+			<strong>11) </strong> Start using your PayPal account: Congratulations! Your live PayPal account is now active and ready to use. You can start sending and receiving money, making online purchases, or receiving payments for your business.</p>
 			</section>
 			
 			<section id = "in-app-purchase-integration">
 			<h3><strong> 13) <u>In App Purchase</u></strong></h3>
 			<img  alt="" src="images/application/in_app_purchase.png">
 			<li>Go to Setting Screen And Click on Payment Setting screen and Choose In App Purchase option</li>
-			<p><strong>1).</strong>If you don't have one already, sign up for a Google Play Developer account. You will need to pay a one-time registration fee.</br>
-			<strong>2).</strong>Link your Google Play Developer account to a Google Wallet Merchant account. This is where you'll receive payments from users. Provide your banking and tax information.</br>
-			<strong>3).</strong>Ensure your app is ready to support in-app purchases.</br>
-			<strong>4).</strong>In the Google Play Developer Console, navigate to your app's page, go to "Monetize" > "In-app products," and click the "Create" button to add new in-app products. You can create either managed products (consumable or non-consumable) or subscriptions.For each product, provide details like the product ID, pricing, and localized descriptions.</br>
-			<strong>5).</strong>For each in-app product, configure its details, including pricing, availability, and any promotional information. You can also create different price points for different regions.</br>
-			<strong>6).</strong>Before releasing your app, it's crucial to test your in-app purchases. Use test accounts provided by Google Play to simulate purchases without actual charges. Ensure that your app handles purchases and consumption correctly.</br>
-			<strong>7).</strong>Once you've thoroughly tested your in-app purchases and your app is ready for release, submit it to the Google Play Store. Ensure that your app's store listing provides clear and accurate information about in-app purchases.</br>
-			<strong>8).</strong>After your app is live, promote your in-app purchases within your app and on the app's store listing to encourage users to make purchases.</br>
-			<strong>9).</strong>Continuously monitor the performance of your in-app purchases, including conversion rates, revenue, and user feedback. Use this data to make improvements and optimize your in-app purchase strategy.</p>
+			<p><strong>1) </strong>If you don't have one already, sign up for a Google Play Developer account. You will need to pay a one-time registration fee.</br>
+			<strong>2) </strong>Link your Google Play Developer account to a Google Wallet Merchant account. This is where you'll receive payments from users. Provide your banking and tax information.</br>
+			<strong>3) </strong>Ensure your app is ready to support in-app purchases.</br>
+			<strong>4) </strong>In the Google Play Developer Console, navigate to your app's page, go to "Monetize" > "In-app products," and click the "Create" button to add new in-app products. You can create either managed products (consumable or non-consumable) or subscriptions.For each product, provide details like the product ID, pricing, and localized descriptions.</br>
+			<strong>5) </strong>For each in-app product, configure its details, including pricing, availability, and any promotional information. You can also create different price points for different regions.</br>
+			<strong>6) </strong>Before releasing your app, it's crucial to test your in-app purchases. Use test accounts provided by Google Play to simulate purchases without actual charges. Ensure that your app handles purchases and consumption correctly.</br>
+			<strong>7). </strong>Once you've thoroughly tested your in-app purchases and your app is ready for release, submit it to the Google Play Store. Ensure that your app's store listing provides clear and accurate information about in-app purchases.</br>
+			<strong>8) </strong>After your app is live, promote your in-app purchases within your app and on the app's store listing to encourage users to make purchases.</br>
+			<strong>9) </strong>Continuously monitor the performance of your in-app purchases, including conversion rates, revenue, and user feedback. Use this data to make improvements and optimize your in-app purchase strategy.</p>
 			</section>
 			
 			<section id = "faq"> 
 			<h3> <strong>14) <u>FAQ</u></strong></h3>
-			<P>1). How to Edit Email or Password for Admin ? <br>
-			Ans. if you don't know how Edit Email or Password please follow this steps.<a href="#edit-admin-email-or-password">(click here)</a></p>
+			<P>1) How to Edit Email or Password for Admin ? <br>
+			Ans. if you don't know how Edit Email or Password please follow this steps.<a href="#edit_email_and_password">(click here)</a></p>
 			
-			<P>2). How to add trainer ? <br>
+			<P>2) How to add trainer ? <br>
 			Ans. if you don't know how to add trainer please follow this steps.<a href="#add-trainer">(click here)</a></p>
 			
-			<P>3). How to add trainer packages? <br>
+			<P>3) How to add trainer packages? <br>
 			Ans. if you don't know how to add trainer pakages please follow this steps.<a href="#trainer-packages">(click here)</a></p>
 			
-			<P>4). How to assign trainer packages? <br>
+			<P>4) How to assign trainer packages? <br>
 			Ans. if you don't know how to assign trainer packages please follow this steps.<a href="#assign-trainer-packages">(click here)</a></p>
 			
-			<P>5). How to add member ? <br>
+			<P>5) How to add member ? <br>
 			Ans. if you don't know how to add Member please follow this steps.<a href="#add-member">(click here)</a></p>
 			
-			<P>6). How to add membership ? <br>
+			<P>6) How to add membership ? <br>
 			Ans. if you don't know how to add membership please follow this steps.<a href="#add-membership">(click here)</a></p>
 			
-			<P>7). How to assign membership ? <br>
+			<P>7) How to assign membership ? <br>
 			Ans. if you don't know how to assign membership please follow this steps.<a href="#assign-membership">(click here)</a></p>
 			
-			<P>8). How to add workout ? <br>
+			<P>8) How to add workout ? <br>
 			Ans. if you don't know how to add workout please follow this steps.<a href="#add-workout">(click here)</a></p>
 			
-			<P>9). How to add workout category ? <br>
+			<P>9) How to add workout category ? <br>
 			Ans. if you don't know how to add workout category please follow this steps.<a href="#add-workout-category">(click here)</a></p>
 			
-			<P>10). How to add exercise ? <br>
+			<P>10) How to add exercise ? <br>
 			Ans. if you don't know how to add exercise please follow this steps.<a href="#add-exercise">(click here)</a></p>
 			
-			<P>11). How to add class schedule ? <br>
+			<P>11) How to add class schedule ? <br>
 			Ans. if you don't know how to add class schedule follow this steps.<a href="#add-class-schedule">(click here)</a></p>
 			
-			<P>12). How to add measurement ? <br>
+			<P>12) How to add measurement ? <br>
 			Ans. if you don't know how to add measurement please follow this steps.<a href="#add-measurement">(click here)</a></p>
 			
-			<P>13). How to start workout ? <br>
+			<P>13) How to start workout ? <br>
 			Ans. if you don't know how to start workout please follow this steps.<a href="#start-workout">(click here)</a></p>
 			
-			<P>14). How to join class ? <br>
+			<P>14) How to join class ? <br>
 			Ans. if you don't know how to join class please follow this steps.<a href="#join-class">(click here)</a></p>
 			
-			<P>15). How to add Nutrition plan ? <br>
+			<P>15) How to add Nutrition plan ? <br>
 			Ans. if you don't know how to add nutrition plan please follow this steps.<a href="#add-nutrition">(click here)</a></p>
 			
-			<P>16). How to View Nutrition plan ? <br>
+			<P>16) How to View Nutrition plan ? <br>
 			Ans. if you don't know how to add nutrition plan please follow this steps.<a href="#view_nutrition">(click here)</a></p>
 			</section>
-			
-
                     <!-- start-footer-->
-          <div id="footer"> © 2023 Mojoomla All Rights Reserved. </div>
+          <div id="footer"> © 2024 Mojoomla All Rights Reserved. </div>
           <!-- end-footer -->
         </section>
 		
