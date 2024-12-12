@@ -75,18 +75,19 @@ rel="stylesheet" type="text/css">
   <!-- end-header -->
   <section class="container">
     <div class="row">
-      <div id="header-sm">
-/*        <div class="col-md-3 logo"> <a href="index.html"><img src="images/mojoomla_logo.jpg" width="150" id="img-logo" alt="logo"></a> </div>
+  <div id="header-sm">
+        <div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png" width="150" id="img-logo" alt="logo"></a> </div>
         <div class="col-md-8 col-md-offset-1 desc">
-
-*/
+          <h4 class="slight">CrossFit Web</h4>
+          <h5 class="slight"><small> Documented by Mojoomla - at December 12 2024</small></h5>
         </div>
       </div>
-         <div class="col-md-4">
+      <div class="col-md-4">
         <aside id="side-nav">
-          <div class="logo">&nbsp;&nbsp; <img src="images/mojoomla_logo.png" id="img-logo" alt="mojoomla" style="margin-bottom:20px; height="80" width="230"> </div>
+                <div class="logo">&nbsp;&nbsp; <img src="images/mojoomla_logo.png" id="img-logo" alt="mojoomla" style="margin-bottom:20px; height="80" width="230"> </div>
           <ul id="top-menu">
-<li><a href="#introduction _of_project">Introduction</a></li>
+           
+	<li><a href="#introduction _of_project">Introduction</a></li>
 			  <li><a href="#setting-up-android-project">setting up Android Project</a></li>
 			  <li><a href="#flutter-version">Flutter Version</a></li>
 			  <li><a href="#set-up-firebase-project">set up Firebase</a></li>
@@ -106,17 +107,17 @@ rel="stylesheet" type="text/css">
 			<li><a href="#paypal-integration">PayPal Payment GateWay Set up</a></li>
 			<li><a href="#in-app-purchase-integration">In App Purchase Set up</a></li>
 			<li><a href="#faq">FAQ</a></li>
-<!--
-<li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li>
--->
+			</ul><!-- <li><a href="https://play.google.com/store/apps/details?id=crossfit.personaltrainer.gymtrainer.fitness" target="_blank">Download App</a></li> -->
 
-			</ul>
+
         </aside>
       </div>
       <div class="col-md-8">
-        <section  id="Introduction">
-          <div id="header" class="row">
-            <div class="col-md-3 logo"> <a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo" height="90" width="80"></a> </div>
+<section  id="Introduction">
+    <div id="header" class="row">
+            <div class="col-md-3 logo"> 
+		<a href="index.html"><img src="images/logo.png"  id="img-logo" alt="logo" ></a>
+	    </div>
             <div class="col-md-8 col-md-offset-1 desc">
                       <h4 class="slight">CrossFit Web</h4>
         <h5 class="slight"><small>Documented by Mojoomla - at <span id="current-date"></span></small></h5>
@@ -129,7 +130,7 @@ rel="stylesheet" type="text/css">
             </div>
           </div>
 <hr class="vertical-space2">
-          <p align="center"><img src="images/preview-images.jpg",width="700"></p>
+          <p align="center"><img src="images/preview-images.jpg",></p>
 
 </hr>
 
@@ -142,26 +143,35 @@ rel="stylesheet" type="text/css">
 </hr>
 </section>
 
-		  <section id="setting-up-android-project">
-		  <hr class="vertical-space2">
-
+<iframe 
+    src="https://www.youtube.com/embed/DPrvUwfYEwg" 
+border-radius:""
+title="Youtube Video Player"
+    width="730" 
+    height="315" 
+style="border-radius:15px; overflow:hidden;"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe>
+	  <section id="setting-up-android-project">
+<br>
 			    <h3><strong>2) <u>Set up Flutter Project</u></strong></h3>
 				<br>
-               <h5><strong>A <u>Requirement</u></strong></h5>
-              <ol >
+               			<h5><strong>A <u>Requirement</u></strong></h5>
+              		<ol >
 			    <li>Latest <a href="http://developer.android.com/sdk/index.html" target="_blank">Android Studio</a></li>
 				<li>Windows XP (32-bit), Vista (32- or 64-bit), or Windows 7 And up (32- or 64-bit) </li>
 				<li>Mac OS X 10.5.8 or later (x86 only)</li>
 				<li>Linux (tested on Ubuntu Linux, Lucid Lynx) </li>
 				<li>GNU C Library (glibc) 2.7 or later is required. </li>
 				<li>On Ubuntu Linux, version 8.04 or later is required.64-bit distributions must be capable of running 32-bit applications. </li>
-                <li>4 GB RAM minimum, 8 GB RAM recommended.</li>   
+                	<li>4 GB RAM minimum, 8 GB RAM recommended.</li>   
 				<li>Free Disk At least 1 GB for Android SDK, emulator system images, and caches.</li>
 				<li>Oracle® Java Development Kit (JDK) 8 and up.</li>
-               </ol>
+               		</ol>
 			   
 			  <h5><strong>B <u>Installing the latest version of Android Studio.</u></strong></h5>
-             <code>CrossFit App is built with the latest Android studio <strong>Hedgehog | 2023.1.1</strong></br><strong> NOTE:</strong> There are several other tools to build and run android projects.</code>
+             		<code>CrossFit App is built with the latest Android studio <strong>Hedgehog | 2023.1.1</strong></br><strong> NOTE:</strong> There are several other tools to build and run android projects.</code>
 				           
 		   <ol>
 				<li>	Go to the <a href = "http://developer.android.com/sdk/index.html" target="_blank"> Android Developer Page</a> </li>
@@ -190,7 +200,15 @@ rel="stylesheet" type="text/css">
 			
 			<section id="set-up-firebase-project">
 				   <h3><strong>4) <u>Set Up Firebase</u></strong></h3>
-				   <p>To set up Firebase Database for a CrossFit Web, follow these step-by-step instructions:</p>
+ <p>To set up Firebase Database for a CrossFit Web, follow these step-by-step instructions:</p>
+<iframe 
+    src="https://www.youtube.com/embed/WXHf1Uh_fRc?" 
+    width="730" 
+    height="315" 
+style="border-radius:15px"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+</iframe> 
 				   <p>
 				   <strong>Step 1: Create a Firebase project</strong>
 				   <li>Go to the Firebase console <strong><a href="https://console.firebase.google.com/" target="_blank">(https://console.firebase.google.com/)</a></strong> and sign in with your Google account.</li>
@@ -538,9 +556,6 @@ rel="stylesheet" type="text/css">
 		
         <p><strong>Note:</strong> You need the 512x512 px size for publishing to Google Play.</p> </section>
 			   	   
-
-
-        
 <section id = "change-packae-name">
  <h3><strong>8) <u>Change Package Name</u></strong></h3>
 	<p>To change the package name of a Flutter application, you need to update it in several places within your project. Follow these steps to change the package name:</p>
@@ -624,6 +639,20 @@ Drag and drop the selected files from the left pane to the target directory in t
 		</section>
 	
 <section id = "admin_view"><h4><strong>B) Admin</strong></h4>
+<br>
+<iframe 
+    src="https://www.youtube.com/embed/zW_VNs8tlg4?feature=shared" 
+title="Youtube Video Player"
+    width="730" 
+    height="315" 
+style="border-radius:15px;"
+
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+
+    allowfullscreen>
+</iframe>
+
+<br>
 <strong> Login Admin ID And Password For Demo</strong><p> <strong>Email :</strong>admin@gmail.com<br><strong>Password :</strong>admin@123</p>
 	<img  alt="" src="images/application/admin-view.png" >&nbsp;&nbsp;&nbsp;
 <br>
